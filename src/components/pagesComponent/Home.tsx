@@ -118,21 +118,27 @@ const ebooks = [
   {
     title: 'Canada Visit Visa Application Guide',
     price: 'GH₵ 150',
+    paragraph: 'Learn how to apply correctly and avoid common mistakes that lead to rejection.',
     color: 'bg-red-500/10',
   },
   {
     title: 'UK Visit Visa Application Guide',
     price: 'GH₵ 120',
+    paragraph: 'Learn how to apply correctly and avoid common mistakes that lead to rejection.',
     color: 'bg-blue-500/10',
   },
 ];
-export const Home = () => {
+type NavigationProps = {
+  onNavigate: (page: 'resources') => void;
+};
+
+export const Home = ({ onNavigate }: NavigationProps) => {
   return (
     <div className="min-h-screen bg-white">
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
         <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-blue-50/50 rounded-bl-[100px] hidden md:block" />
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-screen-xl mx-auto px-6 xl:container">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{
                 opacity: 0,
@@ -163,7 +169,7 @@ export const Home = () => {
                   href="https://calender.google.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cursor-pointer flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-200"
+                  className="cursor-pointer flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-200"
                 >
                   Book a Consultation <ArrowRight className="w-5 h-5" />
                 </a>
@@ -171,7 +177,7 @@ export const Home = () => {
                   href="https://web.whatsapp.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className=" cursor-pointer flex items-center justify-center gap-2 bg-emerald-50 text-emerald-700 border border-emerald-100 px-8 py-4 rounded-xl font-bold hover:bg-emerald-100 transition-all"
+                  className=" cursor-pointer flex items-center justify-center gap-2 bg-emerald-50 text-emerald-700 border border-emerald-100 px-4 py-4 rounded-xl font-bold hover:bg-emerald-100 transition-all"
                 >
                   <MessageCircle className="w-5 h-5" /> Chat on WhatsApp
                 </a>
@@ -212,7 +218,7 @@ export const Home = () => {
               }}
               className="relative"
             >
-              <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
+              <div className=" hidden relative z-10 rounded-3xl overflow-hidden shadow-2xl lg:block">
                 <img
                   src="https://images.unsplash.com/photo-1517672651691-24622a91b550?auto=format&fit=crop&q=80&w=1200"
                   alt="Travel and Tourism"
@@ -243,7 +249,7 @@ export const Home = () => {
       </section>
 
       <section id="services" className="py-24 bg-slate-50">
-        <div className="container mx-auto px-6">
+        <div className="max-w-screen-xl mx-auto px-6 xl:container">
           <div className="text-center mb-16">
             <h2 className="text-blue-600 font-bold uppercase tracking-wider text-sm mb-4">
               Our Expertise
@@ -272,7 +278,7 @@ export const Home = () => {
       </section>
 
       <section className="py-24 overflow-hidden">
-        <div className="container mx-auto px-6">
+        <div className="max-w-screen-xl mx-auto px-6 xl:container">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
@@ -327,9 +333,9 @@ export const Home = () => {
       </section>
 
       <section id="ebooks" className="py-24 bg-slate-900 text-white">
-        <div className="container mx-auto px-6">
+        <div className="max-w-screen-xl mx-auto px-6 xl:container">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-            <div className="max-w-xl">
+            <div className="max-w-lg">
               <h2 className="text-blue-400 font-bold uppercase tracking-wider text-sm mb-4">
                 Digital Learning
               </h2>
@@ -339,12 +345,15 @@ export const Home = () => {
                 guides crafted by industry professionals.
               </p>
             </div>
-            <button className="flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition-colors">
+            <button
+              onClick={() => onNavigate('resources')}
+              className="flex items-center cursor-pointer gap-2 text-blue-400 font-bold hover:text-blue-300 transition-colors"
+            >
               View All Resources <ChevronRight className="w-5 h-5" />
             </button>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             {ebooks.map((ebook, idx) => (
               <div
                 key={idx}
@@ -359,12 +368,10 @@ export const Home = () => {
                   </div>
                   <div className="text-center md:text-left">
                     <h4 className="text-2xl font-bold mb-2">{ebook.title}</h4>
-                    <p className="text-slate-400 text-sm mb-6">
-                      Learn how to apply correctly and avoid common mistakes that lead to rejection.
-                    </p>
+                    <p className="text-slate-400 text-sm mb-6">{ebook.paragraph}</p>
                     <div className="flex items-center justify-center md:justify-start gap-4">
                       <span className="text-xl font-bold text-blue-400">{ebook.price}</span>
-                      <button className="bg-white text-slate-900 px-6 py-2 rounded-full text-sm font-bold hover:bg-blue-400 hover:text-white transition-all">
+                      <button className="text-sm bg-white text-slate-900 px-4 py-2 rounded-full  font-bold hover:bg-blue-400 hover:text-white transition-all md:text-xs xl:text-sm ">
                         Instant Download
                       </button>
                     </div>
@@ -377,7 +384,7 @@ export const Home = () => {
       </section>
 
       <section className="py-24">
-        <div className="container mx-auto px-6">
+        <div className="max-w-screen-xl mx-auto px-6 xl:container">
           <div className="text-center mb-16">
             <h3 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">
               Success Stories
@@ -435,7 +442,7 @@ export const Home = () => {
       </section>
 
       {/* Final CTA */}
-      <section id="cta" className="py-24 container mx-auto px-6">
+      <section id="cta" className="py-24 max-w-screen-xl mx-auto px-6 xl:container">
         <div className="bg-blue-600 rounded-[40px] p-8 md:p-20 text-center text-white relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
             <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />

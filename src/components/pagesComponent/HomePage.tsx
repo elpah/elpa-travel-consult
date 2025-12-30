@@ -23,7 +23,7 @@ export const HomePage = () => {
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <Home />;
+        return <Home onNavigate={setCurrentPage} />;
       case 'services':
         return <Services />;
       case 'study-abroad':
@@ -39,7 +39,7 @@ export const HomePage = () => {
       case 'contact':
         return <Contact />;
       default:
-        return <Home />;
+        return <Home onNavigate={setCurrentPage} />;
     }
   };
   return (

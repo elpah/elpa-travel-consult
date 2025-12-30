@@ -66,8 +66,8 @@ export const Footer = ({ onNavigate }: FooterProps) => {
   };
   return (
     <footer className="bg-slate-50 pt-20 pb-10 border-t border-slate-100">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-12 mb-20">
+      <div className="max-w-screen-xl mx-auto px-6 xl:container">
+        <div className="grid md:grid-cols-4 gap-12 mb-20 lg:gap-24">
           <div className="col-span-1 md:col-span-1">
             <div
               className="flex items-center gap-2 mb-6 cursor-pointer"
@@ -155,7 +155,7 @@ export const Footer = ({ onNavigate }: FooterProps) => {
               </li>
               <li className="flex items-center gap-3">
                 <Globe className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                <span>info@elpatravelconsult.com</span>
+                <span className='break-words flex-1 min-w-0'>info@elpatravelconsult.com</span>
               </li>
             </ul>
           </div>

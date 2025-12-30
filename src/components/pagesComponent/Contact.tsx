@@ -57,7 +57,11 @@ export const Contact = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: ['info@elpatravelconsult.com', 'support@elpatravelconsult.com', 'We reply within 24 hours'],
+      details: [
+        'info@elpatravelconsult.com',
+        'support@elpatravelconsult.com',
+        'We reply within 24 hours',
+      ],
       action: 'Send Email',
     },
     {
@@ -92,7 +96,7 @@ export const Contact = () => {
   return (
     <div className="min-h-screen bg-white pt-24">
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
-        <div className="container mx-auto px-6">
+        <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <motion.div
             initial={{
               opacity: 0,
@@ -123,7 +127,7 @@ export const Contact = () => {
 
       {/* Contact Info Cards */}
       <section className="py-24">
-        <div className="container mx-auto px-6">
+        <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
             {contactInfo.map((info, idx) => (
               <motion.div
@@ -361,7 +365,7 @@ export const Contact = () => {
       </section>
 
       <section className="py-24 bg-slate-50">
-        <div className="container mx-auto px-6">
+        <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-blue-600 font-bold uppercase tracking-wider text-sm mb-4">FAQs</h2>
             <h3 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">

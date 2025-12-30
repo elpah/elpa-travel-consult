@@ -306,7 +306,7 @@ export const VisitGhana = () => {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-400 rounded-full blur-3xl" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-screen-xl xl:container  mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{
@@ -381,7 +381,7 @@ export const VisitGhana = () => {
 
       {/* Why Choose Us */}
       <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-6">
+        <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-6">
             {whyChoose.map((item, idx) => (
               <motion.div
@@ -417,7 +417,7 @@ export const VisitGhana = () => {
 
       {/* Services */}
       <section className="py-24">
-        <div className="container mx-auto px-6">
+        <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-emerald-600 font-bold uppercase tracking-wider text-sm mb-4">
               Our Services
@@ -426,8 +426,8 @@ export const VisitGhana = () => {
               Everything You Need for Your Ghana Trip
             </h3>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              From invitation letters, visa application support, airport pickup, tour arrangements, we handle every detail of your journey to
-              ensure a smooth and memorable experience.
+              From invitation letters, visa application support, airport pickup, tour arrangements,
+              we handle every detail of your journey to ensure a smooth and memorable experience.
             </p>
           </div>
 
@@ -471,7 +471,7 @@ export const VisitGhana = () => {
       </section>
 
       <section className="py-24 bg-slate-50">
-        <div className="container mx-auto px-6">
+        <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-emerald-600 font-bold uppercase tracking-wider text-sm mb-4">
               Explore Ghana
@@ -536,7 +536,7 @@ export const VisitGhana = () => {
 
       {/* Travel Packages */}
       <section className="py-24">
-        <div className="container mx-auto px-6">
+        <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-emerald-600 font-bold uppercase tracking-wider text-sm mb-4">
               Travel Packages
@@ -675,7 +675,7 @@ export const VisitGhana = () => {
 
       {/* Additional Services Banner */}
       <section className="py-24 bg-gradient-to-r from-emerald-600 to-amber-600 text-white">
-        <div className="container mx-auto px-6">
+        <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Complete Travel Care</h2>
             <p className="text-xl text-emerald-100 mb-10 leading-relaxed">
@@ -713,7 +713,7 @@ export const VisitGhana = () => {
       </section>
 
       <section className="py-24 bg-slate-50">
-        <div className="container mx-auto px-6">
+        <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
               Ready to Experience Ghana?
