@@ -1,5 +1,19 @@
-import React from 'react';
-import { Plane, Globe, BookOpen, CheckCircle2, ShieldCheck, Clock, ArrowRight, MessageCircle, Star, MapPin, Users, GraduationCap, FileText, Hotel, ChevronRight } from 'lucide-react';
+import {
+  Globe,
+  BookOpen,
+  CheckCircle2,
+  ShieldCheck,
+  Clock,
+  ArrowRight,
+  MessageCircle,
+  Star,
+  MapPin,
+  Users,
+  GraduationCap,
+  FileText,
+  Hotel,
+  ChevronRight,
+} from 'lucide-react';
 import { motion } from 'framer-motion';
 type ServiceCardProps = {
   icon: React.ElementType;
@@ -7,58 +21,131 @@ type ServiceCardProps = {
   description: string;
   items: string[];
 };
-const ServiceCard = ({
-  icon: Icon,
-  title,
-  description,
-  items
-}: ServiceCardProps) => <motion.div whileHover={{
-  y: -5
-}} className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
+const ServiceCard = ({ icon: Icon, title, description, items }: ServiceCardProps) => (
+  <motion.div
+    whileHover={{
+      y: -5,
+    }}
+    className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300"
+  >
     <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
       <Icon className="text-blue-600 w-8 h-8" />
     </div>
     <h3 className="text-xl font-bold text-slate-900 mb-3">{title}</h3>
     <p className="text-slate-600 mb-6 text-sm leading-relaxed">{description}</p>
     <ul className="space-y-2">
-      {items.map((item, idx) => <li key={idx} className="flex items-center text-sm text-slate-700">
+      {items.map((item, idx) => (
+        <li key={idx} className="flex items-center text-sm text-slate-700">
           <CheckCircle2 className="w-4 h-4 text-emerald-500 mr-2 flex-shrink-0" />
           {item}
-        </li>)}
+        </li>
+      ))}
     </ul>
-  </motion.div>;
-const testimonials = [{
-  name: "Kwame Mensah",
-  role: "International Student",
-  text: "ELPA Travel Consult made my dream of studying in Canada a reality. Their SOP writing assistance was professional and successful.",
-  rating: 5
-}, {
-  name: "Abena Osei",
-  role: "Business Traveler",
-  text: "The best visa assistance I've ever had in Ghana. Transparent, honest, and they handle everything with extreme precision.",
-  rating: 5
-}, {
-  name: "Kofi Boateng",
-  role: "Family Vacationer",
-  text: "Our family trip to Dubai was seamless thanks to their hotel and flight reservation services. Highly recommended!",
-  rating: 5
-}] as any[];
+  </motion.div>
+);
+const testimonials = [
+  {
+    name: 'Kwame Mensah',
+    role: 'International Student',
+    text: 'ELPA Travel Consult made my dream of studying in Canada a reality. Their SOP writing assistance was professional and successful.',
+    rating: 5,
+  },
+  {
+    name: 'Abena Osei',
+    role: 'Business Traveler',
+    text: "The best visa assistance I've ever had in Ghana. Transparent, honest, and they handle everything with extreme precision.",
+    rating: 5,
+  },
+  {
+    name: 'Kofi Boateng',
+    role: 'Family Vacationer',
+    text: 'Our family trip to Dubai was seamless thanks to their hotel and flight reservation services. Highly recommended!',
+    rating: 5,
+  },
+];
+
+const services = [
+  {
+    icon: FileText,
+    title: 'Visa & Documentation',
+    description: 'Expert guidance for complex visa applications across major destinations.',
+    items: ['UK, Canada & USA', 'Europe & Schengen', 'Dubai & Asia', 'Birth Certificates'],
+  },
+  {
+    icon: GraduationCap,
+    title: 'Study Abroad',
+    description: 'Unlock international education opportunities with end-to-end support.',
+    items: ['Admission Application', 'School Selection', 'Cover Letter & SOP', 'Visa Processing'],
+  },
+  {
+    icon: Globe,
+    title: 'Travel Packages',
+    description: 'Curated experiences for couples and groups in world-class destinations.',
+    items: ['Dubai Packages', 'South Africa Tours', 'European Escapes', 'China Business Trips'],
+  },
+  {
+    icon: Hotel,
+    title: 'Ticketing & Booking',
+    description: 'Seamless logistical arrangements for your next journey.',
+    items: ['Flight Reservations', 'Hotel Bookings', 'Conference Travel', 'Travel Insurance'],
+  },
+];
+
+const whyChoose = [
+  {
+    title: 'Ghana-focused Expertise',
+    description: 'Deep understanding of the local landscape and embassy requirements in Accra.',
+    icon: MapPin,
+  },
+  {
+    title: 'Transparent Consultation',
+    description: 'Honest assessment of your profile and success chances without false promises.',
+    icon: ShieldCheck,
+  },
+  {
+    title: 'Affordable & Flexible',
+    description: 'Competitive pricing structures and payment plans designed for our clients.',
+    icon: Clock,
+  },
+  {
+    title: 'End-to-End Support',
+    description: "We don't just fill forms; we guide you from the first call to your safe arrival.",
+    icon: Users,
+  },
+];
+
+const ebooks = [
+  {
+    title: 'Canada Visit Visa Application Guide',
+    price: 'GH₵ 150',
+    color: 'bg-red-500/10',
+  },
+  {
+    title: 'UK Visit Visa Application Guide',
+    price: 'GH₵ 120',
+    color: 'bg-blue-500/10',
+  },
+];
 export const Home = () => {
-  return <div className="min-h-screen bg-white">
-      {/* Hero Section */}
+  return (
+    <div className="min-h-screen bg-white">
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
         <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-blue-50/50 rounded-bl-[100px] hidden md:block" />
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{
-            opacity: 0,
-            x: -30
-          }} animate={{
-            opacity: 1,
-            x: 0
-          }} transition={{
-            duration: 0.6
-          }}>
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: -30,
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{
+                duration: 0.6,
+              }}
+            >
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
                 <Globe className="w-3 h-3" />
                 Trusted Travel Partner in Ghana
@@ -67,40 +154,70 @@ export const Home = () => {
                 Travel Abroad <span className="text-blue-600">Made Simple</span>
               </h1>
               <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-lg">
-                Your reliable partner for Visa assistance, Study Abroad programs, and unforgettable International Travel packages. We simplify the complex to get you where you want to be.
+                Your reliable partner for Visa assistance, Study Abroad programs, and unforgettable
+                International Travel packages. We simplify the complex to get you where you want to
+                be.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-200 hover:-translate-y-1">
+                <a
+                  href="https://calender.google.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-200"
+                >
                   Book a Consultation <ArrowRight className="w-5 h-5" />
-                </button>
-                <button className="flex items-center justify-center gap-2 bg-emerald-50 text-emerald-700 border border-emerald-100 px-8 py-4 rounded-xl font-bold hover:bg-emerald-100 transition-all">
+                </a>
+                <a
+                  href="https://web.whatsapp.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" cursor-pointer flex items-center justify-center gap-2 bg-emerald-50 text-emerald-700 border border-emerald-100 px-8 py-4 rounded-xl font-bold hover:bg-emerald-100 transition-all"
+                >
                   <MessageCircle className="w-5 h-5" /> Chat on WhatsApp
-                </button>
+                </a>
               </div>
               <div className="mt-12 flex items-center gap-4 text-slate-500">
                 <div className="flex -space-x-3">
-                  {[1, 2, 3, 4].map(i => <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center overflow-hidden">
-                      <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${i + 10}`} alt="User" />
-                    </div>)}
+                  {[1, 2, 3, 4].map(i => (
+                    <div
+                      key={i}
+                      className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center overflow-hidden"
+                    >
+                      <img
+                        src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${i + 10}`}
+                        alt="User"
+                      />
+                    </div>
+                  ))}
                 </div>
                 <p className="text-sm font-medium">
-                  Joined by <span className="text-slate-900 font-bold">2,500+</span> Ghanaian travelers
+                  Joined by <span className="text-slate-900 font-bold">2,500+</span>
+                  travelers
                 </p>
               </div>
             </motion.div>
 
-            <motion.div initial={{
-            opacity: 0,
-            scale: 0.9
-          }} animate={{
-            opacity: 1,
-            scale: 1
-          }} transition={{
-            duration: 0.8,
-            delay: 0.2
-          }} className="relative">
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: 0.9,
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+              }}
+              transition={{
+                duration: 0.8,
+                delay: 0.2,
+              }}
+              className="relative"
+            >
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1517672651691-24622a91b550?auto=format&fit=crop&q=80&w=1200" alt="Travel and Tourism" className="w-full h-auto" />
+                <img
+                  src="https://images.unsplash.com/photo-1517672651691-24622a91b550?auto=format&fit=crop&q=80&w=1200"
+                  alt="Travel and Tourism"
+                  className="w-full h-auto"
+                />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl z-20 hidden lg:block border border-slate-100">
                 <div className="flex items-center gap-4">
@@ -125,41 +242,63 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Services Section */}
       <section id="services" className="py-24 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-blue-600 font-bold uppercase tracking-wider text-sm mb-4">Our Expertise</h2>
+            <h2 className="text-blue-600 font-bold uppercase tracking-wider text-sm mb-4">
+              Our Expertise
+            </h2>
             <h3 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">
               Comprehensive Travel Solutions
             </h3>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              From individual visa processing to corporate travel arrangements, we provide specialized services tailored to meet your global mobility needs.
+              From individual visa processing to corporate travel arrangements, we provide
+              specialized services tailored to meet your global mobility needs.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <ServiceCard icon={FileText} title="Visa & Documentation" description="Expert guidance for complex visa applications across major destinations." items={['UK, Canada & USA', 'Europe & Schengen', 'Dubai & Asia', 'Birth Certificates']} />
-            <ServiceCard icon={GraduationCap} title="Study Abroad" description="Unlock international education opportunities with end-to-end support." items={['Admission Application', 'School Selection', 'Cover Letter & SOP', 'Visa Processing']} />
-            <ServiceCard icon={Globe} title="Travel Packages" description="Curated experiences for couples and groups in world-class destinations." items={['Dubai Packages', 'South Africa Tours', 'European Escapes', 'China Business Trips']} />
-            <ServiceCard icon={Hotel} title="Ticketing & Booking" description="Seamless logistical arrangements for your next journey." items={['Flight Reservations', 'Hotel Bookings', 'Conference Travel', 'Travel Insurance']} />
+            {services.map(service => (
+              <ServiceCard
+                key={service.title}
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                items={service.items}
+              />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
       <section className="py-24 overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4 pt-12">
-                  <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&q=80&w=400" className="rounded-2xl shadow-lg h-64 w-full object-cover" alt="Travel 1" />
-                  <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&q=80&w=400" className="rounded-2xl shadow-lg h-48 w-full object-cover" alt="Travel 2" />
+                  <img
+                    src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&q=80&w=400"
+                    className="rounded-2xl shadow-lg h-64 w-full object-cover"
+                    alt="Travel 1"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&q=80&w=400"
+                    className="rounded-2xl shadow-lg h-48 w-full object-cover"
+                    alt="Travel 2"
+                  />
                 </div>
                 <div className="space-y-4">
-                  <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&q=80&w=400" className="rounded-2xl shadow-lg h-48 w-full object-cover" alt="Travel 3" />
-                  <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=400" className="rounded-2xl shadow-lg h-64 w-full object-cover" alt="Travel 4" />
+                  <img
+                    src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&q=80&w=400"
+                    className="rounded-2xl shadow-lg h-48 w-full object-cover"
+                    alt="Travel 3"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=400"
+                    className="rounded-2xl shadow-lg h-64 w-full object-cover"
+                    alt="Travel 4"
+                  />
                 </div>
               </div>
               <div className="absolute inset-0 bg-blue-600/10 mix-blend-overlay rounded-2xl" />
@@ -167,26 +306,11 @@ export const Home = () => {
 
             <div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-8">
-                Why Ghanaians Choose <span className="text-blue-600">ELPA Travel</span>
+                Why Choose <span className="text-blue-600">ELPA Travel</span>
               </h2>
               <div className="space-y-8">
-                {[{
-                title: 'Ghana-focused Expertise',
-                description: 'Deep understanding of the local landscape and embassy requirements in Accra.',
-                icon: MapPin
-              }, {
-                title: 'Transparent Consultation',
-                description: 'Honest assessment of your profile and success chances without false promises.',
-                icon: ShieldCheck
-              }, {
-                title: 'Affordable & Flexible',
-                description: 'Competitive pricing structures and payment plans designed for our clients.',
-                icon: Clock
-              }, {
-                title: 'End-to-End Support',
-                description: "We don't just fill forms; we guide you from the first call to your safe arrival.",
-                icon: Users
-              }].map((item, idx) => <div key={idx} className="flex gap-6">
+                {whyChoose.map((item, idx) => (
+                  <div key={idx} className="flex gap-6">
                     <div className="flex-shrink-0 w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center">
                       <item.icon className="text-blue-600 w-6 h-6" />
                     </div>
@@ -194,22 +318,25 @@ export const Home = () => {
                       <h4 className="text-xl font-bold text-slate-900 mb-1">{item.title}</h4>
                       <p className="text-slate-600 text-sm leading-relaxed">{item.description}</p>
                     </div>
-                  </div>)}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Digital Products (Ebooks) */}
       <section id="ebooks" className="py-24 bg-slate-900 text-white">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <div className="max-w-xl">
-              <h2 className="text-blue-400 font-bold uppercase tracking-wider text-sm mb-4">Digital Learning</h2>
+              <h2 className="text-blue-400 font-bold uppercase tracking-wider text-sm mb-4">
+                Digital Learning
+              </h2>
               <h3 className="text-3xl md:text-5xl font-bold mb-6">Expert Visa Guides</h3>
               <p className="text-slate-400">
-                Master the application process yourself with our comprehensive, step-by-step digital guides crafted by industry professionals.
+                Master the application process yourself with our comprehensive, step-by-step digital
+                guides crafted by industry professionals.
               </p>
             </div>
             <button className="flex items-center gap-2 text-blue-400 font-bold hover:text-blue-300 transition-colors">
@@ -218,16 +345,14 @@ export const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {[{
-            title: 'Canada Visit Visa Application Guide',
-            price: 'GH₵ 150',
-            color: 'bg-red-500/10'
-          }, {
-            title: 'UK Visit Visa Application Guide',
-            price: 'GH₵ 120',
-            color: 'bg-blue-500/10'
-          }].map((ebook, idx) => <div key={idx} className="group relative bg-slate-800/50 border border-slate-700 p-8 rounded-3xl overflow-hidden hover:border-blue-500/50 transition-all duration-300">
-                <div className={`absolute -right-12 -top-12 w-48 h-48 rounded-full blur-3xl opacity-20 ${idx === 0 ? 'bg-red-500' : 'bg-blue-500'}`} />
+            {ebooks.map((ebook, idx) => (
+              <div
+                key={idx}
+                className="group relative bg-slate-800/50 border border-slate-700 p-8 rounded-3xl overflow-hidden hover:border-blue-500/50 transition-all duration-300"
+              >
+                <div
+                  className={`absolute -right-12 -top-12 w-48 h-48 rounded-full blur-3xl opacity-20 ${idx === 0 ? 'bg-red-500' : 'bg-blue-500'}`}
+                />
                 <div className="relative z-10 flex flex-col md:flex-row gap-8 items-center">
                   <div className="w-32 h-44 bg-slate-700 rounded-lg shadow-2xl flex-shrink-0 flex items-center justify-center p-4 border-l-4 border-blue-500">
                     <BookOpen className="w-12 h-12 text-blue-400" />
@@ -245,48 +370,66 @@ export const Home = () => {
                     </div>
                   </div>
                 </div>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
       <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">Success Stories</h3>
+            <h3 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">
+              Success Stories
+            </h3>
             <div className="flex justify-center gap-1 mb-4">
-              {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />)}
+              {[1, 2, 3, 4, 5].map(i => (
+                <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
+              ))}
             </div>
-            <p className="text-slate-600">Rated Excellent by hundreds of happy travelers across Ghana</p>
+            <p className="text-slate-600">
+              Rated Excellent by hundreds of happy travelers across Ghana
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((t, idx) => <motion.div key={idx} initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true
-          }} transition={{
-            delay: idx * 0.1
-          }} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg relative">
+            {testimonials.map((t, idx) => (
+              <motion.div
+                key={idx}
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                transition={{
+                  delay: idx * 0.1,
+                }}
+                className="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg relative"
+              >
                 <div className="absolute -top-4 -left-4 bg-blue-600 text-white p-3 rounded-xl">
                   <MessageCircle className="w-5 h-5" />
                 </div>
                 <p className="text-slate-600 italic mb-8 leading-relaxed">"{t.text}"</p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-slate-100 overflow-hidden">
-                    <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${t.name}`} alt={t.name} />
+                    <img
+                      src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${t.name}`}
+                      alt={t.name}
+                    />
                   </div>
                   <div>
                     <h5 className="font-bold text-slate-900">{t.name}</h5>
                     <p className="text-slate-500 text-xs">{t.role}</p>
                   </div>
                 </div>
-              </motion.div>)}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -300,9 +443,12 @@ export const Home = () => {
           </div>
 
           <div className="relative z-10 max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-6xl font-bold mb-8">Ready to travel or study abroad?</h2>
+            <h2 className="text-3xl md:text-6xl font-bold mb-8">
+              Ready to travel or study abroad?
+            </h2>
             <p className="text-blue-100 text-lg mb-12 max-w-xl mx-auto">
-              Join thousands of Ghanaians who have successfully navigated the travel process with our expert guidance. Your journey starts today.
+              Join thousands of Ghanaians who have successfully navigated the travel process with
+              our expert guidance. Your journey starts today.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <button className="bg-white text-blue-600 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all shadow-xl shadow-blue-900/20 active:scale-95">
@@ -314,25 +460,33 @@ export const Home = () => {
             </div>
 
             <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-              {[{
-              label: 'Visa Success',
-              value: '98%'
-            }, {
-              label: 'Happy Clients',
-              value: '2.5k+'
-            }, {
-              label: 'Destinations',
-              value: '25+'
-            }, {
-              label: 'Consultants',
-              value: '10+'
-            }].map((stat, idx) => <div key={idx}>
+              {[
+                {
+                  label: 'Visa Success',
+                  value: '98%',
+                },
+                {
+                  label: 'Happy Clients',
+                  value: '2.5k+',
+                },
+                {
+                  label: 'Destinations',
+                  value: '25+',
+                },
+                {
+                  label: 'Consultants',
+                  value: '10+',
+                },
+              ].map((stat, idx) => (
+                <div key={idx}>
                   <div className="text-3xl font-bold mb-1">{stat.value}</div>
                   <div className="text-blue-200 text-sm uppercase tracking-wider">{stat.label}</div>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
