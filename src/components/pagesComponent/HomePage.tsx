@@ -5,10 +5,13 @@ import { Home } from './Home';
 import { Services } from './Services';
 import { StudyAbroad } from './StudyAbroad';
 import { About } from './About';
+import { VisitGhana } from './VisitGhana';
 import { Resources } from './Resources';
 import { Contact } from './Contact';
 export const HomePage = () => {
-  const [currentPage, setCurrentPage] = useState<'home' | 'services' | 'study-abroad' | 'about' | 'resources' | 'contact'>('home');
+  const [currentPage, setCurrentPage] = useState<
+    'home' | 'services' | 'study-abroad' |'visit-ghana'| 'about' | 'resources' | 'contact'
+  >('home');
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
@@ -17,6 +20,8 @@ export const HomePage = () => {
         return <Services />;
       case 'study-abroad':
         return <StudyAbroad />;
+         case 'visit-ghana':
+        return <VisitGhana />;
       case 'about':
         return <About />;
       case 'resources':
@@ -27,9 +32,11 @@ export const HomePage = () => {
         return <Home />;
     }
   };
-  return <div className="min-h-screen bg-white">
+  return (
+    <div className="min-h-screen bg-white">
       <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
       {renderPage()}
       <Footer onNavigate={setCurrentPage} />
-    </div>;
+    </div>
+  );
 };

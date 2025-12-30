@@ -3,34 +3,38 @@ import { SiInstagram, SiFacebook, SiYoutube, SiTiktok } from 'react-icons/si';
 
 type FooterProps = {
   onNavigate: (
-    page: 'home' | 'services' | 'study-abroad' | 'about' | 'resources' | 'contact'
+    page: 'home' | 'services' | 'study-abroad' | 'visit-ghana' | 'about' | 'resources' | 'contact'
   ) => void;
 };
 export const Footer = ({ onNavigate }: FooterProps) => {
   const navLinks = [
     {
       name: 'Home',
-      page: 'home' as const,
+      page: 'home',
     },
     {
       name: 'About',
-      page: 'about' as const,
+      page: 'about',
     },
     {
       name: 'Services',
-      page: 'services' as const,
+      page: 'services',
     },
     {
       name: 'Study Abroad',
-      page: 'study-abroad' as const,
+      page: 'study-abroad',
+    },
+    {
+      name: 'Visit Ghana',
+      page: 'visit-ghana',
     },
     {
       name: 'Resources',
-      page: 'resources' as const,
+      page: 'resources',
     },
     {
       name: 'Contact',
-      page: 'contact' as const,
+      page: 'contact',
     },
   ] as any[];
   const socials = [
@@ -40,7 +44,7 @@ export const Footer = ({ onNavigate }: FooterProps) => {
     { name: 'Youtube', icon: SiYoutube },
   ];
   const handleNavClick = (
-    page: 'home' | 'services' | 'study-abroad' | 'about' | 'resources' | 'contact'
+    page: 'home' | 'services' | 'study-abroad' | 'visit-ghana' | 'about' | 'resources' | 'contact'
   ) => {
     onNavigate(page);
     window.scrollTo({

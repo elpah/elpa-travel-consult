@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Globe } from 'lucide-react';
+import  { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 type NavigationProps = {
-  currentPage: 'home' | 'services' | 'study-abroad' | 'about' | 'resources' | 'contact';
+  currentPage: 'home' | 'services' | 'study-abroad' | 'visit-ghana' | 'about' | 'resources' | 'contact';
   onNavigate: (
-    page: 'home' | 'services' | 'study-abroad' | 'about' | 'resources' | 'contact'
+    page: 'home' | 'services' | 'study-abroad' | 'visit-ghana'| 'about' | 'resources' | 'contact'
   ) => void;
 };
 export const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
@@ -35,6 +35,10 @@ export const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
       page: 'study-abroad' as const,
     },
     {
+      name: 'Visit Ghana',
+      page: 'visit-ghana' as const,
+    },
+    {
       name: 'Resources',
       page: 'resources' as const,
     },
@@ -44,7 +48,7 @@ export const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
     },
   ] as any[];
   const handleNavClick = (
-    page: 'home' | 'services' | 'study-abroad' | 'about' | 'resources' | 'contact'
+    page: 'home' | 'services' | 'study-abroad' | 'visit-ghana'| 'about' | 'resources' | 'contact'
   ) => {
     onNavigate(page);
     setMobileMenuOpen(false);
