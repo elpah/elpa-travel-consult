@@ -3,7 +3,15 @@ import { SiInstagram, SiFacebook, SiYoutube, SiTiktok } from 'react-icons/si';
 
 type FooterProps = {
   onNavigate: (
-    page: 'home' | 'services' | 'study-abroad' | 'visit-ghana' | 'about' | 'resources' | 'contact'
+    page:
+      | 'home'
+      | 'services'
+      | 'study-abroad'
+      | 'visit-ghana'
+      | 'invest-ghana'
+      | 'about'
+      | 'resources'
+      | 'contact'
   ) => void;
 };
 export const Footer = ({ onNavigate }: FooterProps) => {
@@ -27,6 +35,10 @@ export const Footer = ({ onNavigate }: FooterProps) => {
     {
       name: 'Visit Ghana',
       page: 'visit-ghana',
+    },
+    {
+      name: 'Invest In Ghana',
+      page: 'invest-ghana',
     },
     {
       name: 'Resources',
