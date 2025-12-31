@@ -77,7 +77,7 @@ const services = [
       'Passport',
       'Flight Reservation',
       'Hotel Reservation',
-      'Travel Insurance'
+      'Travel Insurance',
     ],
   },
   {
@@ -97,15 +97,26 @@ const services = [
     icon: Globe,
     title: 'Travel Packages',
     description: 'Curated experiences for couples and groups in world-class destinations.',
-    items: ['Dubai Holiday Packages', 'South Africa Tours', 'European Escapes', 'China Business Trips'],
+    items: [
+      'Dubai Holiday Packages',
+      'South Africa Tours',
+      'European Escapes',
+      'China Business Trips',
+    ],
   },
   {
     icon: Hotel,
     title: 'Ticketing & Booking',
     description: 'Seamless logistical arrangements for your next journey.',
-    items: ['Flight Bookings', 'Hotel Bookings', 'Conference Bookings','Tour & Excursion Bookings','Travel Itinerary Planning',
+    items: [
+      'Flight Bookings',
+      'Hotel Bookings',
+      'Conference Bookings',
+      'Tour & Excursion Bookings',
+      'Travel Itinerary Planning',
 
-'Car Rentals',],
+      'Car Rentals',
+    ],
   },
 ];
 
@@ -184,7 +195,7 @@ export const Home = ({ onNavigate }: NavigationProps) => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://calender.google.com"
+                  href="https://calendar.app.google/igo7gWv9UcxajYLF8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cursor-pointer flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-200"
@@ -477,7 +488,7 @@ export const Home = ({ onNavigate }: NavigationProps) => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <a
-                href="https://calender.google.com"
+                href="https://calendar.app.google/igo7gWv9UcxajYLF8"
                 target="_blank"
                 className="bg-white text-blue-600 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all shadow-xl shadow-blue-900/20 active:scale-95"
               >

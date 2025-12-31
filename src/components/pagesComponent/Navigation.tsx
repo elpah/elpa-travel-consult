@@ -118,9 +118,13 @@ export const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
             ))}
           </div>
           <div className="hidden lg:flex items-center gap-4">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:shadow-lg active:scale-95 cursor-pointer">
+            <a
+              href="https://calendar.app.google/igo7gWv9UcxajYLF8"
+              target="_blank"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:shadow-lg active:scale-95 cursor-pointer"
+            >
               Book Consultation
-            </button>
+            </a>
           </div>
           <button
             className="lg:hidden text-slate-900"

@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   FileText,
   GraduationCap,
@@ -18,13 +17,16 @@ type ServiceDetailCardProps = {
   description: string;
   features: string[];
   price: string;
+  onNavigate: (page: 'contact') => void;
 };
+
 const ServiceDetailCard = ({
   icon: Icon,
   title,
   description,
   features,
   price,
+  onNavigate,
 }: ServiceDetailCardProps) => (
   <motion.div
     initial={{
@@ -63,13 +65,20 @@ const ServiceDetailCard = ({
         <p className="text-xs text-slate-500 uppercase tracking-wider mb-1">Starting from</p>
         <p className="text-2xl font-bold text-blue-600">{price}</p>
       </div>
-      <button className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all flex items-center gap-2">
+      <button
+        className=" cursor-pointer bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all flex items-center gap-2"
+        onClick={() => onNavigate('contact')}
+      >
         Get Started <ArrowRight className="w-4 h-4" />
       </button>
     </div>
   </motion.div>
 );
-export const Services = () => {
+
+type NavigationProps = {
+  onNavigate: (page: 'contact') => void;
+};
+export const Services = ({ onNavigate }: NavigationProps) => {
   const services = [
     {
       icon: FileText,
@@ -77,11 +86,11 @@ export const Services = () => {
       description:
         'Comprehensive visa application support for all major destinations with expert guidance every step of the way.',
       features: [
-        'Complete document review and preparation',
-        'Embassy appointment booking',
-        'Application form filling assistance',
-        'Interview preparation and coaching',
         'Profile assessment and eligibility check',
+        'Complete document review and preparation',
+        'Application form filling assistance',
+        'Embassy appointment booking',
+        'Interview preparation and coaching',
         'Post-submission tracking and updates',
       ],
       price: 'GH₵ 500',
@@ -229,7 +238,7 @@ export const Services = () => {
         <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, idx) => (
-              <ServiceDetailCard key={idx} {...service} />
+              <ServiceDetailCard key={idx} {...service} onNavigate={() => onNavigate('contact')} />
             ))}
           </div>
         </div>
@@ -302,7 +311,6 @@ export const Services = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-24">
         <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-[40px] p-12 md:p-20 text-center text-white relative overflow-hidden">
@@ -317,9 +325,13 @@ export const Services = () => {
                 Book a free consultation with our experts and take the first step toward your
                 international journey.
               </p>
-              <button className="bg-white text-blue-600 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all shadow-xl">
+              <a
+                href="https://calendar.app.google/igo7gWv9UcxajYLF8"
+                target="_blank"
+                className="bg-white text-blue-600 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all shadow-xl"
+              >
                 Book Free Consultation
-              </button>
+              </a>
             </div>
           </div>
         </div>

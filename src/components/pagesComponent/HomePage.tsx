@@ -25,9 +25,9 @@ export const HomePage = () => {
       case 'home':
         return <Home onNavigate={setCurrentPage} />;
       case 'services':
-        return <Services />;
+        return <Services onNavigate={setCurrentPage} />;
       case 'study-abroad':
-        return <StudyAbroad />;
+        return <StudyAbroad onNavigate={setCurrentPage} />;
       case 'visit-ghana':
         return <VisitGhana />;
       case 'invest-ghana':

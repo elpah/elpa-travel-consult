@@ -114,12 +114,20 @@ export const Contact = () => {
               travel and visa needs. Reach out today for a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all shadow-xl">
+              <a
+                href="https://calendar.app.google/igo7gWv9UcxajYLF8"
+                target="_blank"
+                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all shadow-xl"
+              >
                 Book Free Consultation
-              </button>
-              <button className="bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-emerald-600 transition-all shadow-xl flex items-center justify-center gap-2">
+              </a>
+              <a
+                href="https://web.whatsapp.com"
+                target="_blank"
+                className="bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-emerald-600 transition-all shadow-xl flex items-center justify-center gap-2"
+              >
                 <MessageCircle className="w-5 h-5" /> WhatsApp Us
-              </button>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -344,9 +352,13 @@ export const Contact = () => {
                   <p className="text-blue-100 text-sm mb-4">
                     Schedule a one-on-one consultation with our experts.
                   </p>
-                  <button className="bg-white text-blue-600 px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-all w-full">
+                  <a
+                    href="https://calendar.app.google/igo7gWv9UcxajYLF8"
+                    target="_blank"
+                    className="bg-white text-blue-600 px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-all w-full"
+                  >
                     Schedule Now
-                  </button>
+                  </a>
                 </div>
               </div>
 

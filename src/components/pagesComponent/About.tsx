@@ -1,8 +1,6 @@
-import React from 'react';
 import {
   Target,
   Award,
-  Users,
   Heart,
   Shield,
   Lightbulb,
@@ -39,7 +37,7 @@ export const About = () => {
   ] as any[];
   const milestones = [
     {
-      year: '2018',
+      year: '2015',
       title: 'Company Founded',
       description: 'Started with a vision to simplify international travel for Ghanaians',
     },
@@ -102,11 +100,11 @@ export const About = () => {
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed mb-8">
               We are Ghana's premier travel and visa consultancy firm, dedicated to making your
-              international travel and study abroad dreams a seamless reality since 2015.
+              international travel and study abroad dreams a seamless reality.
             </p>
             <div className="flex flex-wrap justify-center gap-8 mt-12">
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">2,500+</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
                 <div className="text-slate-600 text-sm uppercase tracking-wider">Happy Clients</div>
               </div>
               <div className="text-center">
@@ -114,7 +112,7 @@ export const About = () => {
                 <div className="text-slate-600 text-sm uppercase tracking-wider">Success Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">8+</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">5+</div>
                 <div className="text-slate-600 text-sm uppercase tracking-wider">
                   Years Experience
                 </div>
@@ -128,7 +126,6 @@ export const About = () => {
         </div>
       </section>
 
-      {/* Our Story */}
       <section className="py-24">
         <div className=" max-w-screen-xl xl:container  mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -256,7 +253,7 @@ export const About = () => {
               </div>
               <h3 className="text-3xl font-bold mb-4">Our Vision</h3>
               <p className="text-blue-100 leading-relaxed text-lg">
-                To become Africa's most trusted travel consultancy by 2030, recognized for our
+                To become Africa's most trusted travel consultancy by 2035, recognized for our
                 unwavering commitment to client success and innovation in global mobility solutions.
               </p>
             </motion.div>

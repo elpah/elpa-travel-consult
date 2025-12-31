@@ -179,7 +179,7 @@ export const InvestGhana = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-slate-50">
       <section className="pt-32 pb-20 px-6">
-        <div className="max-w-screen-xl xl:container  mx-auto max-w-6xl">
+        <div className="max-w-screen-xl xl:container  mx-auto ">
           <motion.div
             initial={{
               opacity: 0,
@@ -233,7 +233,7 @@ export const InvestGhana = () => {
         </div>
       </section>
       <section className="py-16 px-6">
-        <div className="max-w-screen-xl xl:container  mx-auto max-w-7xl">
+        <div className="max-w-screen-xl xl:container  mx-auto">
           <h2 className="text-4xl font-bold text-slate-900 mb-12 text-center">
             Investment Opportunities
           </h2>
@@ -301,7 +301,7 @@ export const InvestGhana = () => {
         </div>
       </section>
       <section className="py-16 px-6 bg-white">
-        <div className="max-w-screen-xl xl:container  mx-auto max-w-6xl">
+        <div className="max-w-screen-xl xl:container  mx-auto ">
           <h2 className="text-4xl font-bold text-slate-900 mb-4 text-center">
             Complete Investment Support
           </h2>
@@ -337,7 +337,7 @@ export const InvestGhana = () => {
         </div>
       </section>
       <section className="py-20 px-6">
-        <div className="max-w-screen-xl xl:container  mx-auto max-w-4xl">
+        <div className="max-w-screen-xl xl:container  mx-auto">
           <motion.div
             initial={{
               opacity: 0,
@@ -356,10 +356,14 @@ export const InvestGhana = () => {
               opportunities
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-emerald-600 px-8 py-4 rounded-full font-bold hover:bg-emerald-50 transition-all hover:shadow-xl flex items-center justify-center gap-2">
+              <a
+                href="https://calendar.app.google/igo7gWv9UcxajYLF8"
+                target="_blank"
+                className="bg-white text-emerald-600 px-8 py-4 rounded-full font-bold hover:bg-emerald-50 transition-all hover:shadow-xl flex items-center justify-center gap-2"
+              >
                 Schedule Consultation <ArrowRight className="w-5 h-5" />
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-emerald-600 transition-all">
+              </a>
+              <button className="cursor-pointer border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-emerald-600 transition-all">
                 Download Investment Guide
               </button>
             </div>

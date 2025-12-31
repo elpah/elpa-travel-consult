@@ -1,7 +1,5 @@
-import React from 'react';
 import {
   GraduationCap,
-  MapPin,
   Star,
   BookOpen,
   FileText,
@@ -9,10 +7,14 @@ import {
   Globe,
   Users,
   Award,
-  TrendingUp,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-export const StudyAbroad = () => {
+
+type NavigationProps = {
+  onNavigate: (page: 'contact') => void;
+};
+
+export const StudyAbroad = ({ onNavigate }: NavigationProps) => {
   const destinations = [
     {
       country: 'Canada',
@@ -131,7 +133,6 @@ export const StudyAbroad = () => {
   ];
   return (
     <div className="min-h-screen bg-white pt-24">
-      {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-700 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
@@ -162,7 +163,10 @@ export const StudyAbroad = () => {
                 comprehensive support, and proven success strategies for top universities worldwide.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all shadow-xl">
+                <button
+                  onClick={() => onNavigate('contact')}
+                  className=" cursor-pointer bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all shadow-xl"
+                >
                   Start Your Journey
                 </button>
                 <button className="bg-white/10 border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all backdrop-blur">
@@ -209,8 +213,6 @@ export const StudyAbroad = () => {
           </div>
         </div>
       </section>
-
-      {/* Destinations */}
       <section className="py-24 bg-slate-50">
         <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="text-center mb-16">
@@ -282,8 +284,6 @@ export const StudyAbroad = () => {
           </div>
         </div>
       </section>
-
-      {/* Services */}
       <section className="py-24">
         <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="text-center mb-16">
@@ -298,7 +298,6 @@ export const StudyAbroad = () => {
               abroad journey.
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, idx) => (
               <motion.div
@@ -329,8 +328,6 @@ export const StudyAbroad = () => {
           </div>
         </div>
       </section>
-
-      {/* Requirements */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="max-w-screen-xl xl:container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -359,7 +356,6 @@ export const StudyAbroad = () => {
                 Download Full Checklist
               </button>
             </motion.div>
-
             <motion.div
               initial={{
                 opacity: 0,
@@ -387,8 +383,6 @@ export const StudyAbroad = () => {
           </div>
         </div>
       </section>
-
-      {/* Success Stories */}
       <section className="py-24">
         <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="text-center mb-16">
@@ -403,7 +397,6 @@ export const StudyAbroad = () => {
               universities.
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {successStories.map((story, idx) => (
               <motion.div
@@ -443,8 +436,6 @@ export const StudyAbroad = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA */}
       <section className="py-24 bg-blue-50">
         <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
@@ -455,9 +446,13 @@ export const StudyAbroad = () => {
               Book a free consultation with our education experts and start your journey to
               international education.
             </p>
-            <button className="bg-blue-600 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl">
+            <a
+              href="https://calendar.app.google/igo7gWv9UcxajYLF8"
+              target="_blank"
+              className="bg-blue-600 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl"
+            >
               Book Free Consultation
-            </button>
+            </a>
           </div>
         </div>
       </section>
