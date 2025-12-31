@@ -68,26 +68,44 @@ const services = [
   {
     icon: FileText,
     title: 'Visa & Documentation',
-    description: 'Expert guidance for complex visa applications across major destinations.',
-    items: ['UK, Canada & USA', 'Europe & Schengen', 'Dubai & Asia', 'Birth Certificates'],
+    description: 'Expert guidance for visa applications and documentation.',
+    items: [
+      'UK, Canada & USA',
+      'Europe & Schengen',
+      'Dubai & Asia',
+      'Birth Certificates',
+      'Passport',
+      'Flight Reservation',
+      'Hotel Reservation',
+      'Travel Insurance'
+    ],
   },
   {
     icon: GraduationCap,
     title: 'Study Abroad',
     description: 'Unlock international education opportunities with end-to-end support.',
-    items: ['Admission Application', 'School Selection', 'Cover Letter & SOP', 'Visa Processing'],
+    items: [
+      'Course & Program Guidance',
+      'School Selection',
+      'Cover Letter & SOP',
+      'Admission Application',
+      'Visa Processing',
+      'Pre-departure Orientation',
+    ],
   },
   {
     icon: Globe,
     title: 'Travel Packages',
     description: 'Curated experiences for couples and groups in world-class destinations.',
-    items: ['Dubai Packages', 'South Africa Tours', 'European Escapes', 'China Business Trips'],
+    items: ['Dubai Holiday Packages', 'South Africa Tours', 'European Escapes', 'China Business Trips'],
   },
   {
     icon: Hotel,
     title: 'Ticketing & Booking',
     description: 'Seamless logistical arrangements for your next journey.',
-    items: ['Flight Reservations', 'Hotel Bookings', 'Conference Travel', 'Travel Insurance'],
+    items: ['Flight Bookings', 'Hotel Bookings', 'Conference Bookings','Tour & Excursion Bookings','Travel Itinerary Planning',
+
+'Car Rentals',],
   },
 ];
 
@@ -220,9 +238,9 @@ export const Home = ({ onNavigate }: NavigationProps) => {
             >
               <div className=" hidden relative z-10 rounded-3xl overflow-hidden shadow-2xl lg:block">
                 <img
-                  src="https://images.unsplash.com/photo-1517672651691-24622a91b550?auto=format&fit=crop&q=80&w=1200"
+                  src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFyaXN8ZW58MHx8MHx8fDI%3D"
                   alt="Travel and Tourism"
-                  className="w-full h-auto"
+                  className="w-full h-full"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl z-20 hidden lg:block border border-slate-100">
@@ -458,12 +476,20 @@ export const Home = ({ onNavigate }: NavigationProps) => {
               our expert guidance. Your journey starts today.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <button className="bg-white text-blue-600 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all shadow-xl shadow-blue-900/20 active:scale-95">
+              <a
+                href="https://calender.google.com"
+                target="_blank"
+                className="bg-white text-blue-600 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all shadow-xl shadow-blue-900/20 active:scale-95"
+              >
                 Book a Consultation
-              </button>
-              <button className="bg-emerald-500 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-emerald-600 transition-all shadow-xl shadow-emerald-900/20 flex items-center justify-center gap-3 active:scale-95">
+              </a>
+              <a
+                href="https://web.whatsapp.com/"
+                target="_blank"
+                className="bg-emerald-500 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-emerald-600 transition-all shadow-xl shadow-emerald-900/20 flex items-center justify-center gap-3 active:scale-95"
+              >
                 <MessageCircle className="w-6 h-6" /> Chat on WhatsApp
-              </button>
+              </a>
             </div>
 
             <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
