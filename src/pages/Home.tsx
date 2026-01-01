@@ -147,13 +147,13 @@ const whyChoose = [
 const ebooks = [
   {
     title: 'Canada Visit Visa Application Guide',
-    price: 'GH₵ 150',
+    price: 'GH₵ 550',
     paragraph: 'Learn how to apply correctly and avoid common mistakes that lead to rejection.',
     color: 'bg-red-500/10',
   },
   {
     title: 'UK Visit Visa Application Guide',
-    price: 'GH₵ 120',
+    price: 'GH₵ 550',
     paragraph: 'Learn how to apply correctly and avoid common mistakes that lead to rejection.',
     color: 'bg-blue-500/10',
   },
@@ -400,7 +400,7 @@ export const Home = () => {
                     <div className="flex items-center justify-center md:justify-start gap-4">
                       <span className="text-xl font-bold text-blue-400">{ebook.price}</span>
                       <button className="text-sm bg-white text-slate-900 px-4 py-2 rounded-full  font-bold hover:bg-blue-400 hover:text-white transition-all md:text-xs xl:text-sm ">
-                        Instant Download
+                        Coming soon
                       </button>
                     </div>
                   </div>
