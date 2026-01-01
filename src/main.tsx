@@ -1,4 +1,6 @@
 import { StrictMode } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
 document.documentElement.classList.remove('dark');
 
 const forceLightMode = () => {
@@ -28,9 +30,7 @@ const addBrokenImageHandler = () => {
 
 forceLightMode();
 addBrokenImageHandler();
-
 document.addEventListener('DOMContentLoaded', forceLightMode);
-
 const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 mediaQuery.addEventListener('change', forceLightMode);
 import { createRoot } from 'react-dom/client';
@@ -38,6 +38,8 @@ import './index.css';
 import App from './App.tsx';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </StrictMode>
 );

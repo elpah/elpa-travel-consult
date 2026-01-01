@@ -9,12 +9,9 @@ import {
   Award,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-
-type NavigationProps = {
-  onNavigate: (page: 'contact') => void;
-};
-
-export const StudyAbroad = ({ onNavigate }: NavigationProps) => {
+import { useNavigate } from 'react-router-dom';
+const StudyAbroad = () => {
+  const navigate = useNavigate();
   const destinations = [
     {
       country: 'Canada',
@@ -56,7 +53,33 @@ export const StudyAbroad = ({ onNavigate }: NavigationProps) => {
       image:
         'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&q=80&w=800',
     },
-  ] as any[];
+    {
+      country: 'Europe',
+      flag: '🇪🇺',
+      universities: '500+ Universities across multiple countries',
+      programs: 'Bachelor, Master, PhD',
+      highlights: [
+        'Schengen travel access',
+        'Affordable or free tuition in some countries',
+        'Strong post-study work opportunities',
+      ],
+      image:
+        'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800',
+    },
+    {
+      country: 'China',
+      flag: '🇨🇳',
+      universities: '200+ Universities',
+      programs: 'Bachelor, Master, PhD, Short-term courses',
+      highlights: [
+        'Affordable tuition and living costs',
+        'Scholarship opportunities for international students',
+        'Rich cultural experience and language learning',
+      ],
+      image:
+        'https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpbmF8ZW58MHx8MHx8fDI%3D',
+    },
+  ];
   const services = [
     {
       icon: Globe,
@@ -164,7 +187,7 @@ export const StudyAbroad = ({ onNavigate }: NavigationProps) => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
-                  onClick={() => onNavigate('contact')}
+                  onClick={() => navigate('/contact')}
                   className=" cursor-pointer bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all shadow-xl"
                 >
                   Start Your Journey
@@ -176,7 +199,7 @@ export const StudyAbroad = ({ onNavigate }: NavigationProps) => {
 
               <div className="mt-12 flex items-center gap-8">
                 <div>
-                  <div className="text-3xl font-bold mb-1">500+</div>
+                  <div className="text-3xl font-bold mb-1">200+</div>
                   <div className="text-blue-200 text-sm">Students Placed</div>
                 </div>
                 <div>
@@ -205,7 +228,7 @@ export const StudyAbroad = ({ onNavigate }: NavigationProps) => {
               className="relative"
             >
               <img
-                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1702740205565-39aa1cb0474d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fGJsYWNrJTIwZ3JhZHVhdGVzJTIwc21pbGluZ3xlbnwwfHwwfHx8Mg%3D%3D"
                 alt="Students"
                 className="rounded-3xl shadow-2xl"
               />
@@ -459,3 +482,4 @@ export const StudyAbroad = ({ onNavigate }: NavigationProps) => {
     </div>
   );
 };
+export default StudyAbroad;

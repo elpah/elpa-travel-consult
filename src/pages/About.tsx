@@ -9,7 +9,7 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-export const About = () => {
+const About = () => {
   const values = [
     {
       icon: Shield,
@@ -37,23 +37,23 @@ export const About = () => {
   ] as any[];
   const milestones = [
     {
-      year: '2015',
+      year: '2020',
       title: 'Company Founded',
       description: 'Started with a vision to simplify international travel for Ghanaians',
     },
     {
-      year: '2018',
-      title: '500+ Successful Visas',
+      year: '2022',
+      title: '200+ Successful Visas',
       description: 'Reached our first major milestone in visa processing',
     },
     {
-      year: '2020',
+      year: '2024',
       title: 'Study Abroad Program',
       description: 'Expanded services to include comprehensive education consulting',
     },
     {
-      year: '2023',
-      title: '2,500+ Happy Clients',
+      year: '2025',
+      title: '500+ Happy Clients',
       description: "Became Ghana's most trusted travel consultancy partner",
     },
   ] as any[];
@@ -150,9 +150,8 @@ export const About = () => {
               </h3>
               <div className="space-y-6 text-slate-600 leading-relaxed">
                 <p>
-                  Founded in 2015 in the heart of Accra, ELPA Travel Consult was born from a simple
-                  observation: too many Ghanaians faced unnecessary obstacles in pursuing their
-                  international travel and education dreams.
+                  ELPA Travel Consult was born from a simple observation: too many Ghanaians faced
+                  unnecessary obstacles in pursuing their international travel and education dreams.
                 </p>
                 <p>
                   Our founder, El-Pachris Obeng, witnessed firsthand the confusion and frustration
@@ -461,3 +460,5 @@ export const About = () => {
     </div>
   );
 };
+
+export default About;

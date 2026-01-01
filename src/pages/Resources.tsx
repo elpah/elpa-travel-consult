@@ -1,8 +1,6 @@
-import { useEffect } from 'react';
 import {
   BookOpen,
   Download,
-  FileText,
   Video,
   Newspaper,
   ChevronRight,
@@ -10,14 +8,7 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-export const Resources = () => {
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  }, []);
-
+const Resources = () => {
   const ebooks = [
     {
       title: 'Canada Visit Visa Application Guide',
@@ -411,8 +402,6 @@ export const Resources = () => {
           </div>
         </div>
       </section>
-
-      {/* Newsletter CTA */}
       <section className="py-24 bg-blue-600">
         <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center text-white">
@@ -426,18 +415,18 @@ export const Resources = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-6 py-4 rounded-xl text-slate-900 outline-none focus:ring-4 focus:ring-blue-300"
+                className=" border border-slate-200 flex-1 px-6 py-4 rounded-xl text-slate-900  focus:ring-blue-300 outline-none"
               />
               <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all whitespace-nowrap">
                 Subscribe
               </button>
             </div>
-            <p className="text-blue-200 text-xs mt-4">
-              Join 3,000+ subscribers. Unsubscribe anytime.
-            </p>
+
           </div>
         </div>
       </section>
     </div>
   );
 };
+
+export default Resources;

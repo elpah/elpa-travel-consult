@@ -1,29 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
-type NavigationProps = {
-  currentPage:
-    | 'home'
-    | 'services'
-    | 'study-abroad'
-    | 'visit-ghana'
-    | 'invest-ghana'
-    | 'about'
-    | 'resources'
-    | 'contact';
-  onNavigate: (
-    page:
-      | 'home'
-      | 'services'
-      | 'study-abroad'
-      | 'visit-ghana'
-      | 'invest-ghana'
-      | 'about'
-      | 'resources'
-      | 'contact'
-  ) => void;
-};
-export const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
+import { Link, NavLink } from 'react-router-dom';
+export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   useEffect(() => {
@@ -35,86 +14,49 @@ export const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
   }, []);
 
   const navLinks = [
-    {
-      name: 'Home',
-      page: 'home' as const,
-    },
-    {
-      name: 'About',
-      page: 'about' as const,
-    },
-    {
-      name: 'Services',
-      page: 'services' as const,
-    },
-    {
-      name: 'Study Abroad',
-      page: 'study-abroad' as const,
-    },
-    {
-      name: 'Visit Ghana',
-      page: 'visit-ghana' as const,
-    },
-    {
-      name: 'Invest In Ghana',
-      page: 'invest-ghana' as const,
-    },
-    {
-      name: 'Resources',
-      page: 'resources' as const,
-    },
-    {
-      name: 'Contact',
-      page: 'contact' as const,
-    },
-  ] as any[];
-  const handleNavClick = (
-    page:
-      | 'home'
-      | 'services'
-      | 'study-abroad'
-      | 'visit-ghana'
-      | 'invest-ghana'
-      | 'about'
-      | 'resources'
-      | 'contact'
-  ) => {
-    onNavigate(page);
-    setMobileMenuOpen(false);
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Study Abroad', path: '/study-abroad' },
+    { name: 'Visit Ghana', path: '/visit-ghana' },
+    { name: 'Invest In Ghana', path: '/invest-ghana' },
+    { name: 'Resources', path: '/resources' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
   return (
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-white/95 backdrop-blur-sm py-6'}`}
       >
         <div className="max-w-screen-xl mx-auto px-6 flex items-center justify-between lg:px-4 xl:container">
-          <div
-            className="flex items-center gap-2 cursor-pointer"
-            onClick={() => handleNavClick('home')}
-          >
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-              E
+          <Link to="\">
+            <div className="flex items-center gap-2 cursor-pointer">
+              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                E
+              </div>
+              <div className="flex flex-col">
+                <span className="font-bold text-m leading-none text-slate-900">ELPA TRAVEL</span>
+                <span className="text-[10px] uppercase tracking-widest font-semibold text-blue-600">
+                  Consult
+                </span>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-m leading-none text-slate-900">ELPA TRAVEL</span>
-              <span className="text-[10px] uppercase tracking-widest font-semibold text-blue-600">
-                Consult
-              </span>
-            </div>
-          </div>
+          </Link>
           <div className="hidden lg:flex items-center gap-5 xl:gap-8">
-            {navLinks.map(link => (
-              <button
-                key={link.name}
-                onClick={() => handleNavClick(link.page)}
-                className={`text-xs font-medium transition-colors cursor-pointer ${currentPage === link.page ? 'text-blue-600' : 'text-slate-600 hover:text-blue-600'} xl:text-sm`}
+            {navLinks.map((link, index) => (
+              <NavLink
+                key={index}
+                className={({ isActive }) => (isActive ? 'text-blue-600' : ' text-slate-600')}
+                to={link.path}
               >
-                {link.name}
-              </button>
+                <button
+                  key={link.name}
+                  className={`text-xs font-medium transition-colors cursor-pointer hover:text-blue-600 xl:text-sm`}
+                >
+                  {link.name}
+                </button>
+              </NavLink>
             ))}
           </div>
           <div className="hidden lg:flex items-center gap-4">
@@ -155,10 +97,20 @@ export const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
               {navLinks.map(link => (
                 <li
                   key={link.name}
-                  onClick={() => handleNavClick(link.page)}
-                  className={`text-l px-6 border-b border-gray-300 pb-5 text-left ${currentPage === link.page ? 'text-blue-600' : 'text-slate-900'} md:text-xl md:pb-6`}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="border-b border-gray-300"
                 >
-                  {link.name}
+                  {' '}
+                  <NavLink
+                    to={link.path}
+                    className={({ isActive }) =>
+                      `block w-full px-6 pb-5 text-left text-lg md:text-xl md:pb-6 transition-colors ${
+                        isActive ? 'text-blue-600' : 'text-slate-900'
+                      }`
+                    }
+                  >
+                    {link.name}
+                  </NavLink>
                 </li>
               ))}
               <div className="px-6 md:px-16 md:text-xl md:pb-6">

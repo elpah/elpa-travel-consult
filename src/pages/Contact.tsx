@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   MapPin,
   Phone,
@@ -10,7 +10,8 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-export const Contact = () => {
+const Contact = () => {
+  const formRef = useRef<HTMLDivElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -92,7 +93,7 @@ export const Contact = () => {
       answer:
         'Yes! We offer expedited processing services for urgent travel needs. Contact us immediately for availability.',
     },
-  ] as any[];
+  ];
   return (
     <div className="min-h-screen bg-white pt-24">
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
@@ -111,7 +112,7 @@ export const Contact = () => {
             <h1 className="text-5xl md:text-6xl font-extrabold mb-6">Let's Start Your Journey</h1>
             <p className="text-xl text-blue-100 leading-relaxed mb-8">
               Have questions? Need guidance? Our expert team is ready to help you navigate your
-              travel and visa needs. Reach out today for a free consultation.
+              travel, visa and investment needs. Reach out today for a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
@@ -133,7 +134,6 @@ export const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Info Cards */}
       <section className="py-24">
         <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
@@ -188,7 +188,7 @@ export const Contact = () => {
                 once: true,
               }}
             >
-              <div className="bg-slate-50 p-8 md:p-12 rounded-3xl">
+              <div ref={formRef} className="bg-slate-50 p-8 md:p-12 rounded-3xl">
                 <h2 className="text-3xl font-bold text-slate-900 mb-2">Send Us a Message</h2>
                 <p className="text-slate-600 mb-8">
                   Fill out the form below and we'll get back to you within 24 hours.
@@ -416,7 +416,12 @@ export const Contact = () => {
 
           <div className="text-center mt-12">
             <p className="text-slate-600 mb-4">Still have questions?</p>
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 transition-all">
+            <button
+              onClick={() => {
+                formRef.current?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="cursor-pointer bg-blue-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 transition-all"
+            >
               Contact Our Support Team
             </button>
           </div>
@@ -425,3 +430,5 @@ export const Contact = () => {
     </div>
   );
 };
+
+export default Contact;

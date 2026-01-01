@@ -15,6 +15,7 @@ import {
   ChevronRight,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 type ServiceCardProps = {
   icon: React.ElementType;
   title: string;
@@ -157,11 +158,9 @@ const ebooks = [
     color: 'bg-blue-500/10',
   },
 ];
-type NavigationProps = {
-  onNavigate: (page: 'resources') => void;
-};
 
-export const Home = ({ onNavigate }: NavigationProps) => {
+export const Home = () => {
+  const navigate = useNavigate()
   return (
     <div className="min-h-screen bg-white">
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
@@ -375,7 +374,7 @@ export const Home = ({ onNavigate }: NavigationProps) => {
               </p>
             </div>
             <button
-              onClick={() => onNavigate('resources')}
+              onClick={() => navigate("/resources")}
               className="flex items-center cursor-pointer gap-2 text-blue-400 font-bold hover:text-blue-300 transition-colors"
             >
               View All Resources <ChevronRight className="w-5 h-5" />
@@ -511,7 +510,7 @@ export const Home = ({ onNavigate }: NavigationProps) => {
                 },
                 {
                   label: 'Happy Clients',
-                  value: '2.5k+',
+                  value: '500+',
                 },
                 {
                   label: 'Destinations',

@@ -1,88 +1,44 @@
+import { Link } from 'react-router-dom';
 import { Globe, MapPin, MessageCircle } from 'lucide-react';
 import { SiInstagram, SiFacebook, SiYoutube, SiTiktok } from 'react-icons/si';
 
-type FooterProps = {
-  onNavigate: (
-    page:
-      | 'home'
-      | 'services'
-      | 'study-abroad'
-      | 'visit-ghana'
-      | 'invest-ghana'
-      | 'about'
-      | 'resources'
-      | 'contact'
-  ) => void;
-};
-export const Footer = ({ onNavigate }: FooterProps) => {
+export const Footer = () => {
   const navLinks = [
-    {
-      name: 'Home',
-      page: 'home',
-    },
-    {
-      name: 'About',
-      page: 'about',
-    },
-    {
-      name: 'Services',
-      page: 'services',
-    },
-    {
-      name: 'Study Abroad',
-      page: 'study-abroad',
-    },
-    {
-      name: 'Visit Ghana',
-      page: 'visit-ghana',
-    },
-    {
-      name: 'Invest In Ghana',
-      page: 'invest-ghana',
-    },
-    {
-      name: 'Resources',
-      page: 'resources',
-    },
-    {
-      name: 'Contact',
-      page: 'contact',
-    },
-  ] as any[];
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Study Abroad', path: '/study-abroad' },
+    { name: 'Visit Ghana', path: '/visit-ghana' },
+    { name: 'Invest In Ghana', path: '/invest-ghana' },
+    { name: 'Resources', path: '/resources' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
   const socials = [
     { name: 'facebook', icon: SiFacebook },
     { name: 'instagram', icon: SiInstagram },
     { name: 'tiktok', icon: SiTiktok },
     { name: 'Youtube', icon: SiYoutube },
   ];
-  const handleNavClick = (
-    page: 'home' | 'services' | 'study-abroad' | 'visit-ghana' | 'about' | 'resources' | 'contact'
-  ) => {
-    onNavigate(page);
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
+
   return (
     <footer className="bg-slate-50 pt-20 pb-10 border-t border-slate-100">
       <div className="max-w-screen-xl mx-auto px-6 xl:container">
         <div className="grid md:grid-cols-4 gap-12 mb-20 lg:gap-24">
           <div className="col-span-1 md:col-span-1">
-            <div
-              className="flex items-center gap-2 mb-6 cursor-pointer"
-              onClick={() => handleNavClick('home')}
-            >
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                E
+            <Link to="\">
+              <div className="flex items-center gap-2 mb-6 cursor-pointer">
+                <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                  E
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-bold text-xl leading-none text-slate-900">ELPA TRAVEL</span>
+                  <span className="text-[10px] uppercase tracking-widest font-semibold text-blue-600">
+                    Consult
+                  </span>
+                </div>
               </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-xl leading-none text-slate-900">ELPA TRAVEL</span>
-                <span className="text-[10px] uppercase tracking-widest font-semibold text-blue-600">
-                  Consult
-                </span>
-              </div>
-            </div>
+            </Link>
             <p className="text-slate-500 text-sm leading-relaxed mb-6">
               Your trusted Ghanaian travel, visa, and study abroad partner. Simplifying global
               exploration one client at a time.
@@ -104,14 +60,13 @@ export const Footer = ({ onNavigate }: FooterProps) => {
               Quick Links
             </h4>
             <ul className="space-y-4">
-              {navLinks.map(link => (
-                <li key={link.name}>
-                  <button
-                    onClick={() => handleNavClick(link.page)}
-                    className="text-slate-500 hover:text-blue-600 text-sm transition-colors cursor-pointer"
-                  >
-                    {link.name}
-                  </button>
+              {navLinks.map((link, index) => (
+                <li key={index}>
+                  <Link to={link.path}>
+                    <button className="text-slate-500 hover:text-blue-600 text-sm transition-colors cursor-pointer">
+                      {link.name}
+                    </button>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -155,7 +110,7 @@ export const Footer = ({ onNavigate }: FooterProps) => {
               </li>
               <li className="flex items-center gap-3">
                 <Globe className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                <span className='break-words flex-1 min-w-0'>info@elpatravelconsult.com</span>
+                <span className="break-words flex-1 min-w-0">info@elpatravelconsult.com</span>
               </li>
             </ul>
           </div>

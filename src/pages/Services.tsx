@@ -11,13 +11,14 @@ import {
   Users,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 type ServiceDetailCardProps = {
   icon: React.ElementType;
   title: string;
   description: string;
   features: string[];
   price: string;
-  onNavigate: (page: 'contact') => void;
+  handleClick: () => void;
 };
 
 const ServiceDetailCard = ({
@@ -26,7 +27,7 @@ const ServiceDetailCard = ({
   description,
   features,
   price,
-  onNavigate,
+  handleClick,
 }: ServiceDetailCardProps) => (
   <motion.div
     initial={{
@@ -67,7 +68,7 @@ const ServiceDetailCard = ({
       </div>
       <button
         className=" cursor-pointer bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all flex items-center gap-2"
-        onClick={() => onNavigate('contact')}
+        onClick={handleClick}
       >
         Get Started <ArrowRight className="w-4 h-4" />
       </button>
@@ -75,10 +76,8 @@ const ServiceDetailCard = ({
   </motion.div>
 );
 
-type NavigationProps = {
-  onNavigate: (page: 'contact') => void;
-};
-export const Services = ({ onNavigate }: NavigationProps) => {
+const Services = () => {
+  const navigate = useNavigate();
   const services = [
     {
       icon: FileText,
@@ -93,7 +92,7 @@ export const Services = ({ onNavigate }: NavigationProps) => {
         'Interview preparation and coaching',
         'Post-submission tracking and updates',
       ],
-      price: 'GH₵ 500',
+      price: 'GH₵ 2500',
     },
     {
       icon: GraduationCap,
@@ -108,7 +107,7 @@ export const Services = ({ onNavigate }: NavigationProps) => {
         'Scholarship guidance',
         'Pre-departure orientation',
       ],
-      price: 'GH₵ 1,500',
+      price: 'Custom',
     },
     {
       icon: Globe,
@@ -133,6 +132,7 @@ export const Services = ({ onNavigate }: NavigationProps) => {
       features: [
         'Competitive flight rates',
         'Hotel booking worldwide',
+        'Airport and Hotel pickups',
         'Corporate travel arrangements',
         'Group bookings and discounts',
         'Travel itinerary management',
@@ -168,7 +168,7 @@ export const Services = ({ onNavigate }: NavigationProps) => {
         'Document translation',
         'Express processing available',
       ],
-      price: 'GH₵ 200',
+      price: 'GH₵ 2000',
     },
   ] as any[];
   const whyChoose = [
@@ -238,7 +238,7 @@ export const Services = ({ onNavigate }: NavigationProps) => {
         <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, idx) => (
-              <ServiceDetailCard key={idx} {...service} onNavigate={() => onNavigate('contact')} />
+              <ServiceDetailCard key={idx} {...service} handleClick={() => navigate('/contact')} />
             ))}
           </div>
         </div>
@@ -339,3 +339,5 @@ export const Services = ({ onNavigate }: NavigationProps) => {
     </div>
   );
 };
+
+export default Services;

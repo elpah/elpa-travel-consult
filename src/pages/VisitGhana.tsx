@@ -1,3 +1,6 @@
+import { useRef } from 'react';
+import { motion } from 'framer-motion';
+
 import {
   Plane,
   MapPin,
@@ -12,8 +15,12 @@ import {
   Clock,
   Palmtree,
 } from 'lucide-react';
-import { motion } from 'framer-motion';
-export const VisitGhana = () => {
+import { useNavigate } from 'react-router-dom';
+
+const VisitGhana = () => {
+  const navigate = useNavigate();
+  const packagesRef = useRef<HTMLDivElement>(null);
+
   const touristSites = [
     {
       name: 'Cape Coast Castle',
@@ -331,10 +338,18 @@ export const VisitGhana = () => {
                 unforgettable journeys across beautiful Ghana.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-white text-emerald-600 px-8 py-4 rounded-xl font-bold hover:bg-emerald-50 transition-all shadow-xl">
+                <button
+                  onClick={() => navigate('/contact')}
+                  className="cursor-pointer bg-white text-emerald-600 px-8 py-4 rounded-xl font-bold hover:bg-emerald-50 transition-all shadow-xl"
+                >
                   Plan Your Trip
                 </button>
-                <button className="bg-white/10 border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all backdrop-blur">
+                <button
+                  onClick={() => {
+                    packagesRef.current?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="cursor-pointer bg-white/10 border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all backdrop-blur"
+                >
                   View Packages
                 </button>
               </div>
@@ -535,7 +550,7 @@ export const VisitGhana = () => {
       </section>
 
       {/* Travel Packages */}
-      <section className="py-24">
+      <section ref={packagesRef} className="py-24">
         <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-emerald-600 font-bold uppercase tracking-wider text-sm mb-4">
@@ -653,7 +668,10 @@ export const VisitGhana = () => {
                       </p>
                       <p className="text-2xl font-bold text-emerald-600">{pkg.price}</p>
                     </div>
-                    <button className="bg-emerald-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-emerald-700 transition-all">
+                    <button
+                      onClick={() => navigate('/contact')}
+                      className="cursor-pointer bg-emerald-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-emerald-700 transition-all"
+                    >
                       Book Now
                     </button>
                   </div>
@@ -666,7 +684,10 @@ export const VisitGhana = () => {
             <p className="text-slate-600 mb-6">
               Need something different? We can create a custom package for you!
             </p>
-            <button className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition-all">
+            <button
+              onClick={() => navigate('/contact')}
+              className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition-all"
+            >
               Request Custom Package
             </button>
           </div>
@@ -731,3 +752,5 @@ export const VisitGhana = () => {
     </div>
   );
 };
+
+export default VisitGhana;
