@@ -421,7 +421,6 @@ const Resources = () => {
                 Subscribe
               </button>
             </div>
-
           </div>
         </div>
       </section>

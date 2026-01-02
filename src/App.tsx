@@ -4,6 +4,7 @@ import { Theme } from './settings/types';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
+import NotFound from './pages/NotFound';
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const InvestGhana = lazy(() => import('./pages/InvestGhana'));
@@ -11,6 +12,8 @@ const Resources = lazy(() => import('./pages/Resources'));
 const Services = lazy(() => import('./pages/Services'));
 const StudyAbroad = lazy(() => import('./pages/StudyAbroad'));
 const VisitGhana = lazy(() => import('./pages/VisitGhana'));
+const ProgramsPage = lazy(() => import('./pages/ProgramsPage'));
+const CountryDetailsPage = lazy(() => import('./pages/CountryDetailsPage'));
 
 let theme: Theme = 'light';
 
@@ -43,7 +46,11 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/study-abroad" element={<StudyAbroad />} />
+            <Route path="/study-abroad/programs" element={<ProgramsPage />} />
             <Route path="/visit-ghana" element={<VisitGhana />} />
+            <Route path="/study-abroad/countries/:countryName" element={<CountryDetailsPage />} />
+            <Route path="/study-abroad/countries" element={<CountryDetailsPage />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </div>

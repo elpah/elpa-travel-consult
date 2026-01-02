@@ -15,6 +15,7 @@ const StudyAbroad = () => {
   const destinations = [
     {
       country: 'Canada',
+      val: 'canada',
       flag: '🇨🇦',
       universities: '50+ Partner Universities',
       programs: 'Bachelor, Master, Diploma',
@@ -24,6 +25,7 @@ const StudyAbroad = () => {
     },
     {
       country: 'United Kingdom',
+      val: 'uk',
       flag: '🇬🇧',
       universities: '40+ Partner Universities',
       programs: 'Undergraduate, Postgraduate',
@@ -33,6 +35,7 @@ const StudyAbroad = () => {
     },
     {
       country: 'USA',
+      val: 'usa',
       flag: '🇺🇸',
       universities: '60+ Partner Universities',
       programs: 'Associate, Bachelor, Master, PhD',
@@ -46,6 +49,7 @@ const StudyAbroad = () => {
     },
     {
       country: 'Australia',
+      val: 'australia',
       flag: '🇦🇺',
       universities: '30+ Partner Universities',
       programs: 'TAFE, Bachelor, Master',
@@ -55,6 +59,7 @@ const StudyAbroad = () => {
     },
     {
       country: 'Europe',
+      val: 'germany',
       flag: '🇪🇺',
       universities: '500+ Universities across multiple countries',
       programs: 'Bachelor, Master, PhD',
@@ -68,6 +73,7 @@ const StudyAbroad = () => {
     },
     {
       country: 'China',
+      val: 'china',
       flag: '🇨🇳',
       universities: '200+ Universities',
       programs: 'Bachelor, Master, PhD, Short-term courses',
@@ -117,7 +123,7 @@ const StudyAbroad = () => {
       description:
         'Comprehensive orientation covering accommodation, travel, and settling into your new country.',
     },
-  ] as any[];
+  ];
   const successStories = [
     {
       name: 'Abena Mensah',
@@ -192,7 +198,10 @@ const StudyAbroad = () => {
                 >
                   Start Your Journey
                 </button>
-                <button className="bg-white/10 border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all backdrop-blur">
+                <button
+                  onClick={() => navigate('/resources')}
+                  className="cursor-pointer bg-white/10 border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all backdrop-blur"
+                >
                   Download Guide
                 </button>
               </div>
@@ -240,7 +249,7 @@ const StudyAbroad = () => {
         <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-blue-600 font-bold uppercase tracking-wider text-sm mb-4">
-              Study Destinations
+              Popular Destinations
             </h2>
             <h3 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">
               Where Can You Study?
@@ -298,7 +307,10 @@ const StudyAbroad = () => {
                       </li>
                     ))}
                   </ul>
-                  <button className="mt-6 text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors">
+                  <button
+                    onClick={() => navigate(`/study-abroad/countries/${dest.val.toLowerCase()}`)}
+                    className="cursor-pointer mt-6 text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors"
+                  >
                     Explore Programs →
                   </button>
                 </div>
