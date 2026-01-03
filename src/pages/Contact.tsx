@@ -71,7 +71,7 @@ const Contact = () => {
       details: ['+233 (0) 50 000 0000', 'Instant messaging support', 'Available 24/7'],
       action: 'Chat Now',
     },
-  ] as any[];
+  ];
   const faqs = [
     {
       question: 'How long does visa processing take?',

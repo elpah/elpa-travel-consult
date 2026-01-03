@@ -145,7 +145,7 @@ const InvestGhana = () => {
         },
       ],
     },
-  ] as any[];
+  ];
   const services = [
     {
       icon: Shield,
@@ -167,7 +167,7 @@ const InvestGhana = () => {
       title: 'Investment Management',
       description: 'Ongoing support, reporting, and management of your Ghana investments',
     },
-  ] as any[];
+  ];
   const benefits = [
     'Ghana ranked #1 for ease of doing business in West Africa',
     'Stable democracy with investor-friendly policies',

@@ -96,7 +96,7 @@ const Resources = () => {
       color: 'from-amber-500 to-amber-600',
       topics: ['Quick application', 'Requirements', 'Processing times', 'Travel tips'],
     },
-  ] as any[];
+  ];
   const blogPosts = [
     {
       title: '10 Common Visa Rejection Reasons and How to Avoid Them',
@@ -138,7 +138,7 @@ const Resources = () => {
       image:
         'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=400',
     },
-  ] as any[];
+  ];
   const videos = [
     {
       title: 'How to Apply for a Canadian Visa',
@@ -156,7 +156,7 @@ const Resources = () => {
       title: 'Understanding Embassy Requirements',
       duration: '18:15',
     },
-  ] as any[];
+  ];
   return (
     <div className="min-h-screen bg-white pt-24">
       <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white">

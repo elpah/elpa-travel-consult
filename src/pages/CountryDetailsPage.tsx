@@ -1,6 +1,5 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-
 import {
   ArrowLeft,
   GraduationCap,
@@ -17,10 +16,8 @@ import {
 import { motion } from 'framer-motion';
 
 const CountryDetailsPage = () => {
-  const countryDetailsRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const { countryName } = useParams<{ countryName?: string }>();
-  //   const [currentCountry, setCurrentCountry] = useState<string | undefined>(countryName);
   const [currentCountry, setCurrentCountry] = useState<string | undefined>(
     countryName?.toLowerCase()
   );
@@ -38,19 +35,12 @@ const CountryDetailsPage = () => {
   ];
   const isValidCountry = currentCountry ? validCountries.includes(currentCountry) : false;
 
-  //   useEffect(() => {
-  //     if (countryName && countryName !== currentCountry) {
-  //       setCurrentCountry(countryName.toLowerCase());
-  //     }
-  //   }, [countryName]);
-
   useEffect(() => {
     if (!currentCountry) return;
-
     const id = requestAnimationFrame(() => {
-      countryDetailsRef.current?.scrollIntoView({
+      window.scrollTo({
+        top: 0,
         behavior: 'smooth',
-        block: 'start',
       });
     });
 
@@ -765,9 +755,8 @@ const CountryDetailsPage = () => {
 
   const data = countryData[currentCountry ?? 'canada'];
   const handleCountryChange = (country: string) => {
-	  setCurrentCountry(country);
-	  navigate(`/study-abroad/countries/${country}`);
-
+    setCurrentCountry(country);
+    navigate(`/study-abroad/countries/${country}`);
   };
   return (
     <div className="min-h-screen bg-white pt-24">
@@ -781,7 +770,6 @@ const CountryDetailsPage = () => {
             <ArrowLeft className="w-5 h-5" />
             <span className="font-semibold">Back to Study Abroad</span>
           </button>
-
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{
@@ -796,7 +784,7 @@ const CountryDetailsPage = () => {
               <div className="flex items-center gap-4 mb-6">
                 {isValidCountry && <span className="text-7xl">{data.flag}</span>}
                 <div>
-                  <h1 className="text-5xl md:text-6xl font-extrabold">
+                  <h1 className="text-4xl md:text-5xl font-extrabold">
                     Study {isValidCountry ? `in ${data.name}` : 'Abroad'}
                   </h1>
                   {isValidCountry && <p className="text-xl text-blue-100 mt-2">{data.tagline}</p>}
@@ -804,7 +792,7 @@ const CountryDetailsPage = () => {
               </div>
 
               {isValidCountry && (
-                <p className="text-lg text-blue-50 leading-relaxed mb-8">{data.description}</p>
+                <p className="text-md text-blue-50 leading-relaxed mb-8">{data.description}</p>
               )}
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -866,7 +854,6 @@ const CountryDetailsPage = () => {
                     </button>
                   ))}
                 </div>
-
                 <div className="absolute top-0 right-1 h-full w-1 bg-white/20 rounded-full pointer-events-none" />
               </div>
             </motion.div>
@@ -874,7 +861,7 @@ const CountryDetailsPage = () => {
         </div>
       </section>
       {isValidCountry && (
-        <div ref={countryDetailsRef}>
+        <div>
           <section className="py-16 bg-slate-50">
             <div className="max-w-screen-xl xl:container mx-auto px-6">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
@@ -907,7 +894,6 @@ const CountryDetailsPage = () => {
               </div>
             </div>
           </section>
-
           <section className="py-16">
             <div className="max-w-screen-xl xl:container mx-auto px-6">
               <div className="max-w-5xl mx-auto">
@@ -963,18 +949,16 @@ const CountryDetailsPage = () => {
                 <div className="mt-8 grid md:grid-cols-2 gap-6">
                   <div className="bg-blue-600 text-white p-6 rounded-2xl">
                     <h4 className="font-bold text-lg mb-2">Average Tuition Range</h4>
-                    <p className="text-3xl font-extrabold">{data.tuitionRange}</p>
+                    <p className="text-2xl font-extrabold">{data.tuitionRange}</p>
                   </div>
                   <div className="bg-purple-600 text-white p-6 rounded-2xl">
                     <h4 className="font-bold text-lg mb-2">Living Costs</h4>
-                    <p className="text-3xl font-extrabold">{data.livingCost}</p>
+                    <p className="text-2xl font-extrabold">{data.livingCost}</p>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-
-          {/* Popular Programs */}
           <section className="py-16 bg-slate-50">
             <div className="max-w-screen-xl xl:container mx-auto px-6">
               <div className="max-w-5xl mx-auto">
@@ -1009,7 +993,6 @@ const CountryDetailsPage = () => {
               </div>
             </div>
           </section>
-
           <section className="py-16">
             <div className="max-w-screen-xl xl:container mx-auto px-6">
               <div className="max-w-5xl mx-auto">
@@ -1060,8 +1043,6 @@ const CountryDetailsPage = () => {
               </div>
             </div>
           </section>
-
-          {/* Requirements */}
           <section className="py-16 bg-slate-900 text-white">
             <div className="max-w-screen-xl xl:container mx-auto px-6">
               <div className="max-w-4xl mx-auto">
@@ -1085,7 +1066,6 @@ const CountryDetailsPage = () => {
               </div>
             </div>
           </section>
-
           <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
             <div className="max-w-screen-xl xl:container mx-auto px-6">
               <div className="max-w-3xl mx-auto text-center">
@@ -1118,7 +1098,6 @@ const CountryDetailsPage = () => {
                     Email Us Now
                   </a>
                 </div>
-
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-blue-100">
                   <div className="flex items-center gap-2">
                     <Phone className="w-5 h-5" />

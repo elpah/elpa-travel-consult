@@ -15,7 +15,7 @@ const VisitGhana = lazy(() => import('./pages/VisitGhana'));
 const ProgramsPage = lazy(() => import('./pages/ProgramsPage'));
 const CountryDetailsPage = lazy(() => import('./pages/CountryDetailsPage'));
 
-let theme: Theme = 'light';
+const theme: Theme = 'light';
 
 function App() {
   const { pathname } = useLocation();

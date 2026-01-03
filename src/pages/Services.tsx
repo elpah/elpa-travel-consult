@@ -170,7 +170,7 @@ const Services = () => {
       ],
       price: 'GH₵ 2000',
     },
-  ] as any[];
+  ];
   const whyChoose = [
     {
       icon: Shield,
@@ -187,7 +187,7 @@ const Services = () => {
       title: 'Expert Team',
       description: 'Experienced consultants with embassy knowledge',
     },
-  ] as any[];
+  ];
   return (
     <div className="min-h-screen bg-white pt-24">
       {/* Hero Section */}

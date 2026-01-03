@@ -160,7 +160,7 @@ const ebooks = [
 ];
 
 export const Home = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-white">
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
@@ -374,7 +374,7 @@ export const Home = () => {
               </p>
             </div>
             <button
-              onClick={() => navigate("/resources")}
+              onClick={() => navigate('/resources')}
               className="flex items-center cursor-pointer gap-2 text-blue-400 font-bold hover:text-blue-300 transition-colors"
             >
               View All Resources <ChevronRight className="w-5 h-5" />

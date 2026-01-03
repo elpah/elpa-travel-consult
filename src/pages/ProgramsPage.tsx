@@ -94,7 +94,7 @@ const ProgramsPage = () => {
       label: 'Poland',
       flag: '🇵🇱',
     },
-  ] as any[];
+  ];
   const programs = [
     {
       id: 1,
@@ -421,7 +421,7 @@ const ProgramsPage = () => {
       intake: 'October, February',
       contactEmail: 'poland@danabeducation.com',
     },
-  ] as any[];
+  ];
   const filteredPrograms = programs.filter(program => {
     const matchesCountry = selectedCountry === 'all' || program.country === selectedCountry;
     const matchesSearch =

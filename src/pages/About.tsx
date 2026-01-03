@@ -34,7 +34,7 @@ const About = () => {
       description:
         'We build lasting relationships with clients, treating each journey as a collaborative effort.',
     },
-  ] as any[];
+  ];
   const milestones = [
     {
       year: '2020',
@@ -56,7 +56,7 @@ const About = () => {
       title: '500+ Happy Clients',
       description: "Became Ghana's most trusted travel consultancy partner",
     },
-  ] as any[];
+  ];
   const team = [
     {
       name: 'El-Pachris Obeng',
@@ -78,7 +78,7 @@ const About = () => {
       role: 'Travel Packages Manager',
       image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=ama',
     },
-  ] as any[];
+  ];
   return (
     <div className="min-h-screen bg-white pt-24">
       {/* Hero Section */}

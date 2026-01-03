@@ -149,7 +149,7 @@ const StudyAbroad = () => {
       quote:
         'Professional, reliable, and supportive. They turned my study abroad dreams into reality.',
     },
-  ] as any[];
+  ];
   const requirements = [
     'Valid passport',
     'Academic transcripts and certificates',

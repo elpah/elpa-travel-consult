@@ -90,7 +90,7 @@ const VisitGhana = () => {
         'https://images.unsplash.com/photo-1523568129082-87e93d6f75bb?auto=format&fit=crop&q=80&w=800',
       category: 'Historical',
     },
-  ] as any[];
+  ];
   const services = [
     {
       icon: FileText,
@@ -158,7 +158,7 @@ const VisitGhana = () => {
         'Car rentals',
       ],
     },
-  ] as any[];
+  ];
   const packages = [
     {
       name: 'Heritage Explorer',
@@ -286,7 +286,7 @@ const VisitGhana = () => {
       image:
         'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=800',
     },
-  ] as any[];
+  ];
   const whyChoose = [
     {
       icon: Shield,
@@ -303,10 +303,9 @@ const VisitGhana = () => {
       title: 'Personalized Service',
       description: 'Customized itineraries tailored to your interests and schedule',
     },
-  ] as any[];
+  ];
   return (
     <div className="min-h-screen bg-white pt-24">
-      {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-emerald-600 to-amber-600 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
