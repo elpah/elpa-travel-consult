@@ -685,7 +685,7 @@ const VisitGhana = () => {
             </p>
             <button
               onClick={() => navigate('/contact')}
-              className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition-all"
+              className="cursor-pointer bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition-all"
             >
               Request Custom Package
             </button>
@@ -742,7 +742,10 @@ const VisitGhana = () => {
               Let us help you plan an unforgettable journey to the Gateway of West Africa. Book your
               consultation today!
             </p>
-            <button className="bg-emerald-600 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-emerald-700 transition-all shadow-xl">
+            <button
+              onClick={() => navigate('/contact')}
+              className="cursor-pointer bg-emerald-600 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-emerald-700 transition-all shadow-xl"
+            >
               Start Planning Your Trip
             </button>
           </div>
