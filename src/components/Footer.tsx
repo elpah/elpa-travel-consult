@@ -15,9 +15,9 @@ export const Footer = () => {
   ];
 
   const socials = [
-    { name: 'facebook', icon: SiFacebook },
-    { name: 'instagram', icon: SiInstagram },
-    { name: 'tiktok', icon: SiTiktok },
+    { name: 'facebook', icon: SiFacebook, link: 'https://www.facebook.com/elpatravelconsult' },
+    { name: 'instagram', icon: SiInstagram, link: 'https://www.instagram.com/elpatravel_consult' },
+    { name: 'tiktok', icon: SiTiktok, link: 'https://www.tiktok.com/@elpa_travel_consult' },
     { name: 'Youtube', icon: SiYoutube },
   ];
 
@@ -44,15 +44,33 @@ export const Footer = () => {
               exploration one client at a time.
             </p>
             <div className="flex gap-4">
+              {socials.map((social, index) =>
+                social.link ? (
+                  <a
+                    key={index}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-blue-600 transition-colors"
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
+                ) : null
+              )}
+            </div>
+
+            {/* <div className="flex gap-4">
               {socials.map((social, index) => (
-                <div
+                <a
                   key={index}
                   className="w-10 h-10  bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-blue-600 transition-colors cursor-pointer"
+                  href={social.link ?? ''}
+                  target="_blank"
                 >
                   <social.icon className="w-5 h-5" />
-                </div>
+                </a>
               ))}
-            </div>
+            </div> */}
           </div>
 
           <div>

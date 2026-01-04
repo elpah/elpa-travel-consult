@@ -1,9 +1,4 @@
-import {
-  Globe,
-  GraduationCap,
-  FileText,
-  Hotel,
-} from 'lucide-react';
+import { Globe, GraduationCap, FileText, Hotel } from 'lucide-react';
 
 export const services = [
   {

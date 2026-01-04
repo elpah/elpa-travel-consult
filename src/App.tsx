@@ -32,6 +32,7 @@ function App() {
     });
   }, [pathname]);
   setTheme(theme);
+
   return (
     <div className="app-container">
       <Navigation />
