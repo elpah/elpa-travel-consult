@@ -12,7 +12,6 @@ const Resources = lazy(() => import('./pages/Resources'));
 const Services = lazy(() => import('./pages/Services'));
 const StudyAbroad = lazy(() => import('./pages/StudyAbroad'));
 const VisitGhana = lazy(() => import('./pages/VisitGhana'));
-const ProgramsPage = lazy(() => import('./pages/ProgramsPage'));
 const CountryDetailsPage = lazy(() => import('./pages/CountryDetailsPage'));
 
 const theme: Theme = 'light';
@@ -46,7 +45,6 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/study-abroad" element={<StudyAbroad />} />
-            <Route path="/study-abroad/programs" element={<ProgramsPage />} />
             <Route path="/visit-ghana" element={<VisitGhana />} />
             <Route path="/study-abroad/countries/:countryName" element={<CountryDetailsPage />} />
             <Route path="/study-abroad/countries" element={<CountryDetailsPage />} />

@@ -1,19 +1,18 @@
+import { testimonials } from '../data/testimonials';
+import { whyChoose } from '../data/whyChoose';
+import { services } from '../data/homeServices';
+import { ebooks } from '../data/homeEbooks';
 import {
   Globe,
   BookOpen,
   CheckCircle2,
   ShieldCheck,
-  Clock,
   ArrowRight,
   MessageCircle,
   Star,
-  MapPin,
-  Users,
-  GraduationCap,
-  FileText,
-  Hotel,
   ChevronRight,
 } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 type ServiceCardProps = {
@@ -44,120 +43,6 @@ const ServiceCard = ({ icon: Icon, title, description, items }: ServiceCardProps
     </ul>
   </motion.div>
 );
-const testimonials = [
-  {
-    name: 'Kwame Mensah',
-    role: 'International Student',
-    text: 'ELPA Travel Consult made my dream of studying in Canada a reality. Their SOP writing assistance was professional and successful.',
-    rating: 5,
-  },
-  {
-    name: 'Abena Osei',
-    role: 'Business Traveler',
-    text: "The best visa assistance I've ever had in Ghana. Transparent, honest, and they handle everything with extreme precision.",
-    rating: 5,
-  },
-  {
-    name: 'Kofi Boateng',
-    role: 'Family Vacationer',
-    text: 'Our family trip to Dubai was seamless thanks to their hotel and flight reservation services. Highly recommended!',
-    rating: 5,
-  },
-];
-
-const services = [
-  {
-    icon: FileText,
-    title: 'Visa & Documentation',
-    description: 'Expert guidance for visa applications and documentation.',
-    items: [
-      'UK, Canada & USA',
-      'Europe & Schengen',
-      'Dubai & Asia',
-      'Birth Certificates',
-      'Passport',
-      'Flight Reservation',
-      'Hotel Reservation',
-      'Travel Insurance',
-    ],
-  },
-  {
-    icon: GraduationCap,
-    title: 'Study Abroad',
-    description: 'Unlock international education opportunities with end-to-end support.',
-    items: [
-      'Course & Program Guidance',
-      'School Selection',
-      'Cover Letter & SOP',
-      'Admission Application',
-      'Visa Processing',
-      'Pre-departure Orientation',
-    ],
-  },
-  {
-    icon: Globe,
-    title: 'Travel Packages',
-    description: 'Curated experiences for couples and groups in world-class destinations.',
-    items: [
-      'Dubai Holiday Packages',
-      'South Africa Tours',
-      'European Escapes',
-      'China Business Trips',
-    ],
-  },
-  {
-    icon: Hotel,
-    title: 'Ticketing & Booking',
-    description: 'Seamless logistical arrangements for your next journey.',
-    items: [
-      'Flight Bookings',
-      'Hotel Bookings',
-      'Conference Bookings',
-      'Tour & Excursion Bookings',
-      'Travel Itinerary Planning',
-
-      'Car Rentals',
-    ],
-  },
-];
-
-const whyChoose = [
-  {
-    title: 'Ghana-focused Expertise',
-    description: 'Deep understanding of the local landscape and embassy requirements in Accra.',
-    icon: MapPin,
-  },
-  {
-    title: 'Transparent Consultation',
-    description: 'Honest assessment of your profile and success chances without false promises.',
-    icon: ShieldCheck,
-  },
-  {
-    title: 'Affordable & Flexible',
-    description: 'Competitive pricing structures and payment plans designed for our clients.',
-    icon: Clock,
-  },
-  {
-    title: 'End-to-End Support',
-    description: "We don't just fill forms; we guide you from the first call to your safe arrival.",
-    icon: Users,
-  },
-];
-
-const ebooks = [
-  {
-    title: 'Canada Visit Visa Application Guide',
-    price: 'GH₵ 550',
-    paragraph: 'Learn how to apply correctly and avoid common mistakes that lead to rejection.',
-    color: 'bg-red-500/10',
-  },
-  {
-    title: 'UK Visit Visa Application Guide',
-    price: 'GH₵ 550',
-    paragraph: 'Learn how to apply correctly and avoid common mistakes that lead to rejection.',
-    color: 'bg-blue-500/10',
-  },
-];
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -469,7 +354,6 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
       <section id="cta" className="py-24 max-w-screen-xl mx-auto px-6 xl:container">
         <div className="bg-blue-600 rounded-[40px] p-8 md:p-20 text-center text-white relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
