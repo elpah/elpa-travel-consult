@@ -1,6 +1,6 @@
-import { investmentCategories, investGhanaServices } from '../data/InvestGhana';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { investmentCategories, investGhanaServices } from '../data/investGhanaData';
 import { TrendingUp, DollarSign, CheckCircle2, ArrowRight } from 'lucide-react';
 const InvestGhana = () => {
   const navigate = useNavigate();

@@ -128,6 +128,7 @@
 		'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=400',
 	},
   ];
+  
   export const videos = [
 	{
 	  title: 'How to Apply for a Canadian Visa',
