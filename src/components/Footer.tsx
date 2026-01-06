@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Globe, MapPin, MessageCircle } from 'lucide-react';
+import { Globe, MapPin, MessageCircle, Phone } from 'lucide-react';
 import { SiInstagram, SiFacebook, SiYoutube, SiTiktok } from 'react-icons/si';
 
 export const Footer = () => {
@@ -112,23 +112,32 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-
           <div>
             <h4 className="font-bold text-slate-900 mb-6 uppercase text-xs tracking-widest">
               Contact Info
             </h4>
+
             <ul className="space-y-4 text-sm text-slate-500">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0" />
                 <span>Accra, Ghana - East Legon Area</span>
               </li>
+
               <li className="flex items-center gap-3">
-                <MessageCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                <span>+233 (0) 50 000 0000</span>
+                <Phone className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                <a href="tel:+447453594805" className="hover:text-blue-600 transition-colors">
+                  +44 7453 594805
+                </a>
               </li>
+
               <li className="flex items-center gap-3">
                 <Globe className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                <span className="break-words flex-1 min-w-0">info@elpatravelconsult.com</span>
+                <a
+                  href="mailto:info@elpatravelconsult.com"
+                  className="break-words flex-1 min-w-0 hover:text-blue-600 transition-colors"
+                >
+                  info@elpatravelconsult.com
+                </a>
               </li>
             </ul>
           </div>

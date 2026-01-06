@@ -4,14 +4,16 @@ export const contactInfo = [
   {
     icon: MapPin,
     title: 'Visit Our Office',
-    details: ['ELPA Travel Consult', 'East Legon Area', 'Accra, Ghana'],
+    details: ['', '', ''],
     action: 'Get Directions',
+    link: '',
   },
   {
     icon: Phone,
     title: 'Call Us',
-    details: ['+233 (0) 50 000 0000', '+233 (0) 24 000 0000', 'Mon - Fri: 9AM - 6PM'],
+    details: ['+44 7453 594805', 'Mon - Fri: 9AM - 6PM'],
     action: 'Call Now',
+    link: 'tel:+447453594805',
   },
   {
     icon: Mail,
@@ -22,12 +24,14 @@ export const contactInfo = [
       'We reply within 24 hours',
     ],
     action: 'Send Email',
+    link: 'mailto:info@elpatravelconsult.com',
   },
   {
     icon: MessageCircle,
     title: 'WhatsApp',
-    details: ['+233 (0) 50 000 0000', 'Instant messaging support', 'Available 24/7'],
+    details: ['+44 7453 594805', 'Instant messaging support', 'Available 24/7'],
     action: 'Chat Now',
+    link: 'https://wa.me/447453594805',
   },
 ];
 export const faqs = [

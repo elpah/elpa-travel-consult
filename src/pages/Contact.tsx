@@ -64,7 +64,7 @@ const Contact = () => {
                 Book Free Consultation
               </a>
               <a
-                href="https://web.whatsapp.com"
+                href="https://wa.me/447453594805"
                 target="_blank"
                 className="bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-emerald-600 transition-all shadow-xl flex items-center justify-center gap-2"
               >
@@ -108,9 +108,13 @@ const Contact = () => {
                     </p>
                   ))}
                 </div>
-                <button className="text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors">
+                <a
+                  href={info.link}
+                  target="_blank"
+                  className="cursor-pointer text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors"
+                >
                   {info.action} →
-                </button>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -194,7 +198,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
-                        placeholder="+233 50 000 0000"
+                        placeholder="+44 7453 594805"
                       />
                     </div>
 

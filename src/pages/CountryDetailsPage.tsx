@@ -401,7 +401,7 @@ const CountryDetailsPage = () => {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-blue-100">
                   <div className="flex items-center gap-2">
                     <Phone className="w-5 h-5" />
-                    <span>+233 XX XXX XXXX</span>
+                    <span>+44 7453 594805</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail className="w-5 h-5" />

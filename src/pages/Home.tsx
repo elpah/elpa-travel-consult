@@ -87,7 +87,7 @@ export const Home = () => {
                   Book a Consultation <ArrowRight className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://web.whatsapp.com"
+                  href="https://wa.me/447453594805"
                   target="_blank"
                   rel="noopener noreferrer"
                   className=" cursor-pointer flex items-center justify-center gap-2 bg-emerald-50 text-emerald-700 border border-emerald-100 px-4 py-4 rounded-xl font-bold hover:bg-emerald-100 transition-all"
@@ -378,7 +378,7 @@ export const Home = () => {
                 Book a Consultation
               </a>
               <a
-                href="https://web.whatsapp.com/"
+                href="https://wa.me/447453594805"
                 target="_blank"
                 className="bg-emerald-500 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-emerald-600 transition-all shadow-xl shadow-emerald-900/20 flex items-center justify-center gap-3 active:scale-95"
               >
