@@ -9,7 +9,7 @@ export const Footer = () => {
     { name: 'Services', path: '/services' },
     { name: 'Study Abroad', path: '/study-abroad' },
     { name: 'Visit Ghana', path: '/visit-ghana' },
-    { name: 'Invest In Ghana', path: '/invest-ghana' },
+    // { name: 'Invest In Ghana', path: '/invest-ghana' },
     { name: 'Resources', path: '/resources' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -28,15 +28,7 @@ export const Footer = () => {
           <div className="col-span-1 md:col-span-1">
             <Link to="\">
               <div className="flex items-center gap-2 mb-6 cursor-pointer">
-                <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                  E
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-bold text-xl leading-none text-slate-900">ELPA TRAVEL</span>
-                  <span className="text-[10px] uppercase tracking-widest font-semibold text-blue-600">
-                    Consult
-                  </span>
-                </div>
+                <img className="w-30 lg:w-40" src="/logo/logo.png" alt="" />
               </div>
             </Link>
             <p className="text-slate-500 text-sm leading-relaxed mb-6">
@@ -58,19 +50,6 @@ export const Footer = () => {
                 ) : null
               )}
             </div>
-
-            {/* <div className="flex gap-4">
-              {socials.map((social, index) => (
-                <a
-                  key={index}
-                  className="w-10 h-10  bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-blue-600 transition-colors cursor-pointer"
-                  href={social.link ?? ''}
-                  target="_blank"
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div> */}
           </div>
 
           <div>

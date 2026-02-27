@@ -82,7 +82,7 @@ const About = () => {
                   care.
                 </p>
                 <p>
-                  Today, we've helped over 2,500 Ghanaians successfully navigate visa applications,
+                  Today, we've helped over 500 Ghanaians successfully navigate visa applications,
                   secure admission to top international institutions, and create unforgettable
                   travel experiences. Our 98% success rate speaks to our commitment to excellence.
                 </p>
@@ -113,10 +113,8 @@ const About = () => {
               />
               <div className="absolute -bottom-8 -left-8 bg-blue-600 text-white p-8 rounded-2xl shadow-xl max-w-xs">
                 <Award className="w-12 h-12 mb-4" />
-                <p className="font-bold text-lg mb-2">Industry Recognition</p>
-                <p className="text-blue-100 text-sm">
-                  Awarded Best Travel Consultancy in Ghana 2022
-                </p>
+                <p className="font-bold text-lg mb-2">Client Satisfaction</p>
+                <p className="text-blue-100 text-sm">98% satisfied clients</p>
               </div>
             </motion.div>
           </div>

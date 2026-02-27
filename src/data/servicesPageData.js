@@ -14,7 +14,7 @@ export const services = [
       'Interview preparation and coaching',
       'Post-submission tracking and updates',
     ],
-    price: 'GH₵ 2500',
+    price: 'GH₵ 4000',
   },
   {
     icon: GraduationCap,
@@ -90,7 +90,7 @@ export const services = [
       'Document translation',
       'Express processing available',
     ],
-    price: 'GH₵ 2000',
+    price: 'GH₵ 3500',
   },
 ];
 export const whyChoose = [

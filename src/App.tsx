@@ -7,7 +7,7 @@ import { Home } from './pages/Home';
 import NotFound from './pages/NotFound';
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
-const InvestGhana = lazy(() => import('./pages/InvestGhana'));
+// const InvestGhana = lazy(() => import('./pages/InvestGhana'));
 const Resources = lazy(() => import('./pages/Resources'));
 const Services = lazy(() => import('./pages/Services'));
 const StudyAbroad = lazy(() => import('./pages/StudyAbroad'));
@@ -42,7 +42,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/invest-ghana" element={<InvestGhana />} />
+            {/* <Route path="/invest-ghana" element={<InvestGhana />} /> */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/study-abroad" element={<StudyAbroad />} />

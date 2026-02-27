@@ -34,10 +34,12 @@ export const services = [
     title: 'Travel Packages',
     description: 'Curated experiences for couples and groups in world-class destinations.',
     items: [
+      'Honeymoon Packages',
+      'Corporate Travel Package ',
+      'China Business Trips',
       'Dubai Holiday Packages',
       'South Africa Tours',
       'European Escapes',
-      'China Business Trips',
     ],
   },
   {

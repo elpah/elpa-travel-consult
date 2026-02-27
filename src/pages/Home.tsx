@@ -110,7 +110,7 @@ export const Home = () => {
                   ))}
                 </div>
                 <p className="text-sm font-medium">
-                  Joined by <span className="text-slate-900 font-bold">2,500+</span>
+                  Joined by <span className="text-slate-900 font-bold">500+</span>
                   travelers
                 </p>
               </div>

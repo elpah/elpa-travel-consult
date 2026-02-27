@@ -20,7 +20,7 @@ export const contactInfo = [
     title: 'Email Us',
     details: [
       'info@elpatravelconsult.com',
-      'support@elpatravelconsult.com',
+      'marketing@elpatravelconsult.com',
       'We reply within 24 hours',
     ],
     action: 'Send Email',

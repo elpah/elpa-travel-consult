@@ -19,7 +19,7 @@ export const Navigation = () => {
     { name: 'Services', path: '/services' },
     { name: 'Study Abroad', path: '/study-abroad' },
     { name: 'Visit Ghana', path: '/visit-ghana' },
-    { name: 'Invest In Ghana', path: '/invest-ghana' },
+    // { name: 'Invest In Ghana', path: '/invest-ghana' },
     { name: 'Resources', path: '/resources' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -32,15 +32,7 @@ export const Navigation = () => {
         <div className="max-w-screen-xl mx-auto px-6 flex items-center justify-between lg:px-4 xl:container">
           <Link to="\">
             <div className="flex items-center gap-2 cursor-pointer">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                E
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-m leading-none text-slate-900">ELPA TRAVEL</span>
-                <span className="text-[10px] uppercase tracking-widest font-semibold text-blue-600">
-                  Consult
-                </span>
-              </div>
+              <img className="w-30 lg:w-40" src="/logo/logo.png" alt="" />
             </div>
           </Link>
           <div className="hidden lg:flex items-center gap-5 xl:gap-8">

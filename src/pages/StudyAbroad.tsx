@@ -232,9 +232,6 @@ const StudyAbroad = () => {
                 We'll guide you through gathering all necessary documents for your application.
                 Here's a general checklist to get you started:
               </p>
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all">
-                Download Full Checklist
-              </button>
             </motion.div>
             <motion.div
               initial={{
@@ -263,7 +260,7 @@ const StudyAbroad = () => {
           </div>
         </div>
       </section>
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-blue-600 font-bold uppercase tracking-wider text-sm mb-4">
@@ -315,7 +312,7 @@ const StudyAbroad = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="py-24 bg-blue-50">
         <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">

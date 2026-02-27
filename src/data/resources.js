@@ -3,7 +3,7 @@ export const resourcesEbooks = [
     title: 'Canada Visit Visa Application Guide',
     description:
       'Comprehensive step-by-step guide to applying for a Canadian visitor visa with insider tips and common pitfalls to avoid.',
-    price: 'GH₵ 0',
+    price: '$ 0',
     pages: '85 pages',
     rating: 4.9,
     downloads: 1200,
@@ -19,7 +19,7 @@ export const resourcesEbooks = [
     title: 'UK Visit Visa Application Guide',
     description:
       'Everything you need to know about applying for a UK visitor visa, including document requirements and interview tips.',
-    price: 'GH₵ 0',
+    price: '$ 0',
     pages: '72 pages',
     rating: 4.8,
     downloads: 950,
@@ -35,7 +35,7 @@ export const resourcesEbooks = [
     title: 'USA B1/B2 Visa Success Guide',
     description:
       'Master the US visitor visa application with our detailed guide covering DS-160 form, interview strategies, and more.',
-    price: 'GH₵ 0',
+    price: '$ 0',
     pages: '95 pages',
     rating: 5.0,
     downloads: 800,
@@ -51,7 +51,7 @@ export const resourcesEbooks = [
     title: 'Study Abroad Application Masterclass',
     description:
       'Complete guide to applying to international universities including SOP writing, scholarship applications, and more.',
-    price: 'GH₵ 0',
+    price: '$ 0',
     pages: '120 pages',
     rating: 4.9,
     downloads: 650,
@@ -62,7 +62,7 @@ export const resourcesEbooks = [
     title: 'Schengen Visa Application Guide',
     description:
       'Navigate the Schengen visa application for multiple European countries with confidence and clarity.',
-    price: 'GH₵ 0',
+    price: '$ 0',
     pages: '68 pages',
     rating: 4.7,
     downloads: 720,
@@ -73,7 +73,7 @@ export const resourcesEbooks = [
     title: 'Dubai Tourist Visa Quick Guide',
     description:
       'Fast-track your Dubai visa application with our concise, practical guide for Ghanaian travelers.',
-    price: 'GH₵ 0',
+    price: '$ 0',
     pages: '45 pages',
     rating: 4.8,
     downloads: 890,

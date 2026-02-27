@@ -27,7 +27,8 @@ export const milestones = [
   {
     year: '2020',
     title: 'Company Founded',
-    description: 'Started with a vision to simplify international travel for Ghanaians',
+    description:
+      'Formally Xplorefrica, Started with a vision to simplify local and international travels and tour packages for Ghanaians and foreigners visiting Ghana',
   },
   {
     year: '2022',

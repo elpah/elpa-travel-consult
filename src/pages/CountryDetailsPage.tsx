@@ -207,7 +207,7 @@ const CountryDetailsPage = () => {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
-                  {data.studyLevels.map((level: any, idx: number) => (
+                  {data.studyLevels.map((level, idx: number) => (
                     <motion.div
                       key={idx}
                       initial={{
@@ -300,7 +300,7 @@ const CountryDetailsPage = () => {
                   Top Universities in {data.name}
                 </h2>
                 <div className="space-y-4">
-                  {data.topUniversities.map((uni: any, idx: number) => (
+                  {data.topUniversities.map((uni, idx: number) => (
                     <motion.div
                       key={idx}
                       initial={{
