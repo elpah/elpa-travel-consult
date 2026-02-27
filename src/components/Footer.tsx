@@ -74,21 +74,11 @@ export const Footer = () => {
               Services
             </h4>
             <ul className="space-y-4 text-sm text-slate-500">
-              <li className="hover:text-blue-600 transition-colors cursor-pointer">
-                Visa Assistance
-              </li>
-              <li className="hover:text-blue-600 transition-colors cursor-pointer">
-                Study in Canada
-              </li>
-              <li className="hover:text-blue-600 transition-colors cursor-pointer">
-                Study in UK/USA
-              </li>
-              <li className="hover:text-blue-600 transition-colors cursor-pointer">
-                Corporate Ticketing
-              </li>
-              <li className="hover:text-blue-600 transition-colors cursor-pointer">
-                Travel Insurance
-              </li>
+              <li className="hover:text-blue-600 transition-colors">Visa Assistance</li>
+              <li className="hover:text-blue-600 transition-colors">Study in Canada</li>
+              <li className="hover:text-blue-600 transition-colors">Study in UK/USA</li>
+              <li className="hover:text-blue-600 transition-colors">Corporate Ticketing</li>
+              <li className="hover:text-blue-600 transition-colors">Travel Insurance</li>
             </ul>
           </div>
           <div>
@@ -124,7 +114,7 @@ export const Footer = () => {
 
         <div className="pt-10 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-slate-400 text-xs">
-            © {new Date().getFullYear()} ELPA Travel Consult. All rights reserved.
+            © 2026 ELPA Travel Consult. All rights reserved.
           </p>
         </div>
       </div>
