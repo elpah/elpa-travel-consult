@@ -30,7 +30,7 @@ export const Navigation = () => {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-white/95 backdrop-blur-sm py-6'}`}
       >
         <div className="max-w-screen-xl mx-auto px-6 flex items-center justify-between lg:px-4 xl:container">
-          <Link to="\">
+          <Link to="/">
             <div className="flex items-center gap-2 cursor-pointer">
               <img className="w-30 lg:w-40" src="/logo/logo.png" alt="" />
             </div>
