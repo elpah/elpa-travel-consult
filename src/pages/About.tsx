@@ -275,7 +275,7 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="max-w-screen-xl xl:container  mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-blue-600 font-bold uppercase tracking-wider text-sm mb-4">
@@ -325,7 +325,7 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us */}
       <section className="py-24 bg-blue-50">
